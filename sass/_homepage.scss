@@ -1,5 +1,16 @@
 
+.heroBannerCarouselPagination {
+    position: static;
 
+    .swiper-pagination-bullet { 
+        border-radius: 0%;transform: rotate(45deg);
+
+        &.swiper-pagination-bullet-active {
+            background-color: #832729;width: 30px;transform: rotate(0deg);height: 10px;
+            clip-path: polygon(80% 0, 100% 50%, 80% 100%, 20% 100%, 0 50%, 20% 0);
+        }
+    }
+} 
 /*---- Category wrapper start -------*/ 
 .category__col { width: 150px; }
 .category__filter__col { width: calc(100% - 150px);padding-left: 1.5rem; }
@@ -14,15 +25,26 @@
 }
 
 .category__list__box {
-     
-    .icon__box {
-        width: 5rem;height: 5rem;
-        background-color: #F5F5F4;
 
-        img {
-            width: 4.5rem;height: 4.5rem;
+    .category__item {
+        cursor: pointer;
+        .icon__box {
+            width: 5rem;height: 5rem;
+            background-color: #F5F5F4;
+            border: 1px solid #F5F5F4;
+    
+            img {
+                width: 4.5rem;height: 4.5rem;
+            }
+        }
+        &.active {
+            .icon__box { 
+                border-color: #D89946;
+                box-shadow: 4px 5px 15px -3px rgba(0, 0, 0, 0.20);
+            }
         }
     }
+     
 }
 
 

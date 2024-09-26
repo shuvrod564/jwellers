@@ -1,32 +1,21 @@
- 
-
-
-(function ($) {
- 
-
-  
-  
-  
-  
-  
+document.addEventListener('DOMContentLoaded', function () {
+  var mainslider = new Swiper('.heroBannerCarousel', {
+    observer: true,  
+    observeParents: true,
+    loop: false,
+    speed: 400,
+    spaceBetween: 0,
+    slidesPerView: 1, 
+    hashNavigation: {
+      watchState: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 });
-var mainslider = new Swiper('.heroBannerCarousel', {
-  observer: true,  
-  observeParents: true,
-  loop: false,
-  speed: 400,
-  spaceBetween: 0,
-  slidesPerView: 1, 
-  observer: true,  
-  observeParents: true, 
-  hashNavigation: {
-    watchState: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+
 
 
 
@@ -149,4 +138,25 @@ video.addEventListener('click', () => {
 
 video.addEventListener('ended', () => {
     playButton.classList.remove('d-none');
+});
+
+
+
+document.querySelectorAll('.category__item').forEach(item => {
+  item.addEventListener('click', function() {
+      const category = this.querySelector('h3').textContent.trim().toLowerCase(); // Get the category name (e.g., 'necklaces')
+      const tab = document.getElementById(`${category}-tab`); // Find the corresponding tab by id
+
+      document.querySelectorAll('.category__item').forEach(el => {
+        el.classList.remove('active');
+      });
+
+      // Add 'active' class to the clicked category__item
+      this.classList.add('active');
+      
+      if (tab) {
+          var tabTrigger = new bootstrap.Tab(tab); // Bootstrap's tab switching method
+          tabTrigger.show(); // Show the relevant tab
+      }
+  });
 });
