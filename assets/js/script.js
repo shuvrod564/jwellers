@@ -1,20 +1,5 @@
  
 
-/*============================= Back To Top Button Script ========================*/
-var mybutton = document.getElementById("backTop");
-window.onscroll = function () { scrollFunction() };
-function scrollFunction() {
-  if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
-    mybutton.style.display = "flex";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
 
 (function ($) {
  
@@ -105,6 +90,33 @@ var mainslider = new Swiper('.threeItmeCarousel', {
     1200: {
       slidesPerView: 3,
       spaceBetween: 12
+    }
+  },
+});
+
+ 
+// Product slider script
+var productCarousel = new Swiper('.productCarousel', {
+  observer: true,  
+  observeParents: true,
+  loop: false,
+  speed: 400,
+  spaceBetween: 36,
+  slidesPerView: 4, 
+  observer: true,  
+  observeParents: true, 
+  breakpoints: { 
+    576: {
+      slidesPerView: 1,
+      spaceBetween: 12
+    }, 
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 12
+    }, 
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 36
     }
   },
 });

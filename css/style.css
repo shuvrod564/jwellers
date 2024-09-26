@@ -213,6 +213,10 @@ ul li {
   html {
     font-size: 87.5%;
   }
+  .mobile__full__width {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 /*---- Category wrapper start -------*/
 .category__col {
@@ -348,4 +352,84 @@ ul li {
     padding: 1.25rem;
   }
 }
-/*---- Category wrapper end -------*//*# sourceMappingURL=style.css.map */
+/*---- Category wrapper end -------*/
+/*---- Video wrapper styles start -----*/
+.video__box .banner {
+  height: 500px;
+}
+.video__box .btn-white {
+  bottom: 20%;
+  width: 6.25rem;
+  height: 6.25rem;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.337254902);
+}
+.video__box .btn-white::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  filter: blur(20px);
+  -webkit-filter: blur(20px);
+}
+
+.video__wrapper {
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+}
+.video__wrapper .explore__btn {
+  background: linear-gradient(90deg, #832729 0%, #631517 100%);
+}
+.video__wrapper .explore__btn .icon {
+  background-color: #832729;
+  width: 2.62rem;
+  height: 2.62rem;
+  -webkit-box-shadow: inset -1px -1px 4px 0px rgba(131, 39, 40, 0.67), inset 16px 16px 15px 4px rgba(73, 10, 12, 0.57);
+  -moz-box-shadow: inset -1px -1px 4px 0px rgba(131, 39, 40, 0.67), inset 16px 16px 15px 4px rgba(73, 10, 12, 0.57);
+  box-shadow: inset -1px -1px 4px 0px rgba(131, 39, 40, 0.67), inset 16px 16px 15px 4px rgba(73, 10, 12, 0.57);
+}
+.video__wrapper .explore__btn:hover, .video__wrapper .explore__btn:focus, .video__wrapper .explore__btn:active {
+  background: linear-gradient(90deg, #832729 0%, #832729 100%);
+}
+
+.collection__card {
+  background-color: #fff;
+  border: 1px solid #E2E1DF;
+  border-radius: var(--radius);
+  padding: var(--radius);
+}
+.collection__card .title a {
+  color: #070202;
+}
+.collection__card .title a:hover, .collection__card .title a:focus, .collection__card .title a:active {
+  color: var(--brand);
+}
+.collection__card.active {
+  box-shadow: 18px 8px 29px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+  .video__box .banner {
+    height: 360px;
+  }
+}
+@media (max-width: 575px) {
+  .video__box {
+    border-radius: 0 !important;
+  }
+  .video__box .btn-white {
+    bottom: 35%;
+    transform: translate(-50%, -50%) !important;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .video__box .btn-white svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+/*---- Video wrapper styles end -----*//*# sourceMappingURL=style.css.map */
