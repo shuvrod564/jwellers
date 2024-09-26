@@ -331,27 +331,34 @@
          <div class="py-5">
             <div class="container mobile__full__width">
                 <div class="video__wrapper">
-                    <div class="position-relative rounded-4 overflow-hidden video__box">
-                        <img src="assets/images/video-banner.png" class="img-fluid w-100 object-fit-cover banner" alt="Video banner">
+                    <div class="position-relative rounded-4 overflow-hidden video__box"> 
+                        <video id="video" width="640" height="360" poster="assets/images/video-banner.png" class="video">
+                            <source src="assets/images/video/video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                     
     
-                        <button class="btn btn-white position-absolute start-50 translate-middle-x rounded-circle overflow-hidden">
+                        <button type="button" id="play-button" class="btn btn-white position-absolute start-50 translate-middle-x rounded-circle overflow-hidden">
                             <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/>
                             </svg>                             
                         </button>
                     </div>
     
-                    <div class="p-5">
+                    <div class="p-sm-5 py-4">
                         <div class="row g-3 g-lg-4 align-items-center">
                             <div class="col-lg-8 text-center text-lg-start"> 
-                                <h2 class="ff-fraunces fw-semibold fs-1">
-                                    <span class="gradient__title">The</span>
-                                    <span class="display-3 ff-fraunces fw-semibold gradient__title">Maharani</span>
-                                    <span class="gradient__title">Collection</span>
-                                </h2>
-                                <p style="color:#685442;">
-                                    At Tanishq, jewelry is more than adornment; it's a connection to tradition and India's rich cultural legacy. Each piece carries timeless elegance and the enduring spirit of our heritage.
-                                </p>
+                                <div class="px-4 px-sm-0">
+                                    <h2 class="ff-fraunces fw-semibold fs-1">
+                                        <span class="gradient__title">The</span>
+                                        <span class="display-3 ff-fraunces fw-semibold gradient__title">Maharani</span>
+                                        <span class="gradient__title">Collection</span>
+                                    </h2>
+                                    <p style="color:#685442;">
+                                        At Tanishq, jewelry is more than adornment; it's a connection to tradition and India's rich cultural legacy. Each piece carries timeless elegance and the enduring spirit of our heritage.
+                                    </p>
+
+                                </div>
                             </div>
                             <div class="col-lg-4 text-center">
                                 <a href="#" class="btn btn-primary explore__btn ff-fraunces small fw-semibold rounded-pill gap-3 px-4 py-3 border-0">
@@ -388,7 +395,7 @@
                                 <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
                                     <div class="collection__card active"> 
                                         <img 
-                                            src="assets/images/Diana-infinity-Ring.png" 
+                                            src="assets/images/Diana-infinity-Ring-2.png" 
                                             alt="banner" class="img-fluid w-100 object-fit-cover"
                                         >
                                         <div class="caption pt-3">
@@ -405,7 +412,7 @@
                                 <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
                                     <div class="collection__card"> 
                                         <img 
-                                            src="assets/images/Diana-infinity-Ring.png" 
+                                            src="assets/images/Diana-infinity-Ring-3.png" 
                                             alt="banner" class="img-fluid w-100 object-fit-cover"
                                         >
                                         <div class="caption pt-3">
@@ -422,7 +429,7 @@
                                 <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
                                     <div class="collection__card"> 
                                         <img 
-                                            src="assets/images/Diana-infinity-Ring.png" 
+                                            src="assets/images/Diana-infinity-Ring-2.png" 
                                             alt="banner" class="img-fluid w-100 object-fit-cover"
                                         >
                                         <div class="caption pt-3">

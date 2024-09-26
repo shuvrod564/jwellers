@@ -354,8 +354,11 @@ ul li {
 }
 /*---- Category wrapper end -------*/
 /*---- Video wrapper styles start -----*/
-.video__box .banner {
-  height: 500px;
+.video__box .banner, .video__box .video {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
 }
 .video__box .btn-white {
   bottom: 20%;
@@ -401,6 +404,7 @@ ul li {
   border: 1px solid #E2E1DF;
   border-radius: var(--radius);
   padding: var(--radius);
+  transition: all 0.3s ease-in-out;
 }
 .collection__card .title a {
   color: #070202;
@@ -408,18 +412,21 @@ ul li {
 .collection__card .title a:hover, .collection__card .title a:focus, .collection__card .title a:active {
   color: var(--brand);
 }
-.collection__card.active {
+.collection__card:hover {
   box-shadow: 18px 8px 29px 0px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 767px) {
-  .video__box .banner {
+  .video__box .video {
     height: 360px;
   }
 }
 @media (max-width: 575px) {
   .video__box {
     border-radius: 0 !important;
+  }
+  .video__box .video {
+    border-radius: 0%;
   }
   .video__box .btn-white {
     bottom: 35%;
@@ -430,6 +437,16 @@ ul li {
   .video__box .btn-white svg {
     width: 1.25rem;
     height: 1.25rem;
+  }
+  .video__wrapper {
+    border: 0;
+  }
+  .productCarousel .swiper-slide {
+    transform: scaleY(0.9);
+    transition: all 0.3s ease-in-out;
+  }
+  .productCarousel .swiper-slide-active {
+    transform: scaleY(1);
   }
 }
 /*---- Video wrapper styles end -----*//*# sourceMappingURL=style.css.map */

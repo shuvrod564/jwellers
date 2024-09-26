@@ -50,7 +50,7 @@ function initSwiper() {
     loop: false,
     speed: 400,
     spaceBetween: 0,
-    slidesPerView: isVertical ? 'auto' : auto,
+    slidesPerView: isVertical ? 'auto' : 'auto',
     direction: isVertical ? 'vertical' : 'horizontal', // Set direction based on screen width
     pagination: {
       el: '.swiper-pagination',
@@ -99,7 +99,7 @@ var mainslider = new Swiper('.threeItmeCarousel', {
 var productCarousel = new Swiper('.productCarousel', {
   observer: true,  
   observeParents: true,
-  loop: false,
+  loop: true,
   speed: 400,
   spaceBetween: 36,
   slidesPerView: 4, 
@@ -107,8 +107,9 @@ var productCarousel = new Swiper('.productCarousel', {
   observeParents: true, 
   breakpoints: { 
     576: {
-      slidesPerView: 1,
-      spaceBetween: 12
+      slidesPerView: 1.4,
+      spaceBetween: 12,
+      centeredSlides: true
     }, 
     992: {
       slidesPerView: 2,
@@ -125,4 +126,27 @@ var productCarousel = new Swiper('.productCarousel', {
 
   
    
-   
+// Video play button script
+const video = document.getElementById('video');
+const playButton = document.getElementById('play-button');
+
+playButton.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+        playButton.classList.add('d-none');
+    }
+});
+
+video.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+        playButton.classList.add('hidden');
+    } else {
+        video.pause();
+        playButton.classList.remove('d-none');
+    }
+});
+
+video.addEventListener('ended', () => {
+    playButton.classList.remove('d-none');
+});
