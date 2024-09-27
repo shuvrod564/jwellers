@@ -434,10 +434,22 @@ ul li {
   -webkit-box-shadow: inset -1px -1px 4px 0px rgba(131, 39, 40, 0.67), inset 16px 16px 15px 4px rgba(73, 10, 12, 0.57);
   -moz-box-shadow: inset -1px -1px 4px 0px rgba(131, 39, 40, 0.67), inset 16px 16px 15px 4px rgba(73, 10, 12, 0.57);
   box-shadow: inset -1px -1px 4px 0px rgba(131, 39, 40, 0.67), inset 16px 16px 15px 4px rgba(73, 10, 12, 0.57);
+  transition: all 0.3s ease-in-out;
 }
 .video__wrapper .explore__btn:hover, .video__wrapper .explore__btn:focus, .video__wrapper .explore__btn:active {
   background: linear-gradient(90deg, #832729 0%, #631517 100%);
   opacity: 0.6;
+}
+.video__wrapper .explore__btn:hover .icon, .video__wrapper .explore__btn:focus .icon, .video__wrapper .explore__btn:active .icon {
+  background-color: #a76767;
+}
+.video__wrapper .frame {
+  left: 2rem;
+  bottom: 2rem;
+}
+.video__wrapper .frame.right {
+  left: auto;
+  right: 2rem;
 }
 
 .collection__card {
