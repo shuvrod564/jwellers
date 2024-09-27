@@ -1,4 +1,14 @@
 
+.discount__tag {
+    z-index: 999;
+    font-family: var(--dm-sans);
+    &::after {
+        content: '';width: 100%;height: 100%;background-color: #ffffffc0;
+        position: absolute;top: 0%;left: 0%;backdrop-filter: blur(10px);
+    }
+}
+
+
 .heroBannerCarouselPagination {
     position: static;
 
@@ -18,7 +28,7 @@
     .category__col { width: 100%; }
     .category__filter__col { width: 100%;padding-left: 0rem; }
     
-    .categoryCarousel .swiper-slide { display: inline-block;width: auto;margin-right: 1rem; }
+    .categoryCarousel .swiper-slide { display: inline-block;width: 25%; }
 }
 @media (min-width:992px) {
     .category__list__box { max-width: 100px;   }
@@ -42,9 +52,19 @@
                 border-color: #D89946;
                 box-shadow: 4px 5px 15px -3px rgba(0, 0, 0, 0.20);
             }
+            .title {
+                color: #A76F25;
+            }
+        }
+    }  
+}
+
+@media(max-width:767px) {
+    .category__list__box {
+        .swiper-slide {
+            
         }
     }
-     
 }
 
 
@@ -213,3 +233,35 @@
 
 }
 /*---- Video wrapper styles end -----*/ 
+
+/*---- Fixed collection box style start -----*/ 
+.fixed__collection__box {
+    right: 2rem;bottom: 2rem;z-index: 999;
+
+    .btn-primary {
+        background-color: #72252E;box-shadow: 0 18px 20px -5px rgba(73, 10, 12, 0.233);
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+    .dropdown-menu {
+        background-color: #FFF9F2;border-color: #F0DBBC;
+
+        .dropdown-item {
+            border-radius: 2rem;display: inline-block;width: auto;
+            font-size: 11px;font-weight: 500;color: #4A0709;padding: .625rem 1rem;
+
+            &:hover, &:focus, &:active {
+                background-color: #72252E;color: var(--white);box-shadow: 0 18px 20px -5px rgba(73, 10, 12, 0.233);
+            }
+            &.jump {
+                &:hover, &:focus, &:active {
+                    background-color: transparent;color: #72252E;box-shadow: none;text-decoration: underline;
+                }
+
+            }
+        }
+    }
+}
+/*---- Fixed collection box style end -----*/ 

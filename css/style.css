@@ -218,6 +218,21 @@ ul li {
     padding-right: 0;
   }
 }
+.discount__tag {
+  z-index: 999;
+  font-family: var(--dm-sans);
+}
+.discount__tag::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7529411765);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  backdrop-filter: blur(10px);
+}
+
 .heroBannerCarouselPagination {
   position: static;
 }
@@ -253,8 +268,7 @@ ul li {
   }
   .categoryCarousel .swiper-slide {
     display: inline-block;
-    width: auto;
-    margin-right: 1rem;
+    width: 25%;
   }
 }
 @media (min-width: 992px) {
@@ -278,6 +292,9 @@ ul li {
 .category__list__box .category__item.active .icon__box {
   border-color: #D89946;
   box-shadow: 4px 5px 15px -3px rgba(0, 0, 0, 0.2);
+}
+.category__list__box .category__item.active .title {
+  color: #A76F25;
 }
 
 .category__filter__box {
@@ -472,4 +489,43 @@ ul li {
     transform: scaleY(1);
   }
 }
-/*---- Video wrapper styles end -----*//*# sourceMappingURL=style.css.map */
+/*---- Video wrapper styles end -----*/
+/*---- Fixed collection box style start -----*/
+.fixed__collection__box {
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 999;
+}
+.fixed__collection__box .btn-primary {
+  background-color: #72252E;
+  box-shadow: 0 18px 20px -5px rgba(73, 10, 12, 0.233);
+}
+.fixed__collection__box .btn-primary:hover {
+  box-shadow: none;
+}
+.fixed__collection__box .dropdown-menu {
+  background-color: #FFF9F2;
+  border-color: #F0DBBC;
+}
+.fixed__collection__box .dropdown-menu .dropdown-item {
+  border-radius: 2rem;
+  display: inline-block;
+  width: auto;
+  font-size: 11px;
+  font-weight: 500;
+  color: #4A0709;
+  padding: 0.625rem 1rem;
+}
+.fixed__collection__box .dropdown-menu .dropdown-item:hover, .fixed__collection__box .dropdown-menu .dropdown-item:focus, .fixed__collection__box .dropdown-menu .dropdown-item:active {
+  background-color: #72252E;
+  color: var(--white);
+  box-shadow: 0 18px 20px -5px rgba(73, 10, 12, 0.233);
+}
+.fixed__collection__box .dropdown-menu .dropdown-item.jump:hover, .fixed__collection__box .dropdown-menu .dropdown-item.jump:focus, .fixed__collection__box .dropdown-menu .dropdown-item.jump:active {
+  background-color: transparent;
+  color: #72252E;
+  box-shadow: none;
+  text-decoration: underline;
+}
+
+/*---- Fixed collection box style end -----*//*# sourceMappingURL=style.css.map */
