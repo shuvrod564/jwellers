@@ -166,5 +166,9 @@ ul {
     html { font-size: 87.5%; } 
   
    .mobile__full__width { padding-left: 0;padding-right: 0; }
+   .mobile__full__width {
+    margin-right: -.75rem;
+    margin-left: -.75rem;
+   }
 } 
  

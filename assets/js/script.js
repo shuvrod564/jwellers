@@ -229,9 +229,8 @@ var productCarousel2 = new Swiper('.productCarousel2', {
   observeParents: true, 
   breakpoints: { 
     576: {
-      slidesPerView: 1.4,
-      spaceBetween: 12,
-      centeredSlides: true
+      slidesPerView: 2.2,
+      spaceBetween: 12, 
     }, 
     992: {
       slidesPerView: 2,
@@ -245,6 +244,9 @@ var productCarousel2 = new Swiper('.productCarousel2', {
   navigation: {
     nextEl: '.proNavBtnNext',
     prevEl: '.proNavBtnPrev',
+  },
+  pagination: {
+    el: '.productCarousel2Pagination', 
   },
 });
 // Product slider script
@@ -259,9 +261,8 @@ var productCarousel3 = new Swiper('.productCarousel3', {
   observeParents: true, 
   breakpoints: { 
     576: {
-      slidesPerView: 1.4,
-      spaceBetween: 12,
-      centeredSlides: true
+      slidesPerView: 2.2,
+      spaceBetween: 12, 
     }, 
     992: {
       slidesPerView: 2,
@@ -275,6 +276,9 @@ var productCarousel3 = new Swiper('.productCarousel3', {
   navigation: {
     nextEl: '.proNavBtnNext',
     prevEl: '.proNavBtnPrev',
+  },
+  pagination: {
+    el: '.productCarousel3Pagination', 
   },
 });
 // Product slider script
@@ -289,9 +293,8 @@ var productCarousel4 = new Swiper('.productCarousel4', {
   observeParents: true, 
   breakpoints: { 
     576: {
-      slidesPerView: 1.4,
-      spaceBetween: 12,
-      centeredSlides: true
+      slidesPerView: 2.2,
+      spaceBetween: 12, 
     }, 
     992: {
       slidesPerView: 2,
@@ -305,6 +308,9 @@ var productCarousel4 = new Swiper('.productCarousel4', {
   navigation: {
     nextEl: '.proNavBtnNext',
     prevEl: '.proNavBtnPrev',
+  },
+  pagination: {
+    el: '.productCarousel4Pagination', 
   },
 });
 

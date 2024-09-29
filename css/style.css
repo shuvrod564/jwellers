@@ -226,6 +226,10 @@ ul li {
     padding-left: 0;
     padding-right: 0;
   }
+  .mobile__full__width {
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+  }
 }
 .discount__tag {
   z-index: 999;
@@ -516,6 +520,13 @@ ul li {
   }
 }
 @media (max-width: 575px) {
+  .collection__card {
+    padding: 0%;
+    border: 0;
+  }
+  .collection__card .thumbnail {
+    background-color: #F6F6F6;
+  }
   .video__box {
     border-radius: 0 !important;
   }
@@ -738,6 +749,15 @@ ul li {
     padding: 0.75rem 1rem !important;
     white-space: nowrap;
     font-weight: 500;
+  }
+  .custom__nav.filter {
+    width: 100%;
+  }
+  .custom__nav.filter .nav-item {
+    flex: 1 0 0%;
+  }
+  .custom__nav.filter .nav-item .nav-link {
+    width: 100%;
   }
 }
 .pro__card {
