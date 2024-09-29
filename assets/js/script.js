@@ -371,7 +371,7 @@ var creationCarousel = new Swiper('.creationCarousel', {
 $(document).ready(function() {
   $('.select').select2();
 
-  $(".select").select2({
+  $(".modal__select").select2({
     dropdownParent: $("#contactModal")
   });
 });
