@@ -342,14 +342,14 @@
 
     &::before  {
         content: '';width: calc(100%  + 24px);height: calc(100% - 20px);border: 1px solid var(--border-color);display: block;
-        position: absolute;border-radius: 2rem;
+        position: absolute;border-radius: 2rem;pointer-events: none;
     }
     &::before {
         top: 10px;left: -12px;
     }
     &::after {
         content: '';width: calc(100% + 24px);height: 100%;border: 1px solid var(--border-color);display: block;
-        position: absolute;border-radius: 2rem;left: -12px;top: 0px;
+        position: absolute;border-radius: 2rem;left: -12px;top: 0px;pointer-events: none;
     }
 }
 

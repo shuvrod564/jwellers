@@ -639,6 +639,7 @@ ul li {
   display: block;
   position: absolute;
   border-radius: 2rem;
+  pointer-events: none;
 }
 .info__card::before {
   top: 10px;
@@ -654,6 +655,7 @@ ul li {
   border-radius: 2rem;
   left: -12px;
   top: 0px;
+  pointer-events: none;
 }
 
 .highligt__card {
