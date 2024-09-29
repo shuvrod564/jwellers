@@ -57,6 +57,7 @@ body {
 .bg-gradient { background-color: rgba(215, 233, 243, 0.24) !important; }
 .z-index { z-index: 99;position: relative; } 
 .ff-fraunces { font-family: var(--fraunces-font); }
+.round { border-radius: var(--radius); }
    
 .text-primary { color: var(--brand) !important; }  
 .text-dark { color:var(--dark) !important; }      

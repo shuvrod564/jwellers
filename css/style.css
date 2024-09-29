@@ -93,6 +93,10 @@ body {
   font-family: var(--fraunces-font);
 }
 
+.round {
+  border-radius: var(--radius);
+}
+
 .text-primary {
   color: var(--brand) !important;
 }
@@ -733,4 +737,106 @@ ul li {
 .proNavBtnPrev:hover svg, .proNavBtnPrev:active svg, .proNavBtnPrev:focus svg, .proNavBtnNext:hover svg, .proNavBtnNext:active svg, .proNavBtnNext:focus svg {
   fill: #ECECEA;
   transition: all 0.3s ease-in-out;
+}
+
+.text-grey {
+  color: #767469;
+}
+
+.contact__card {
+  background-color: #FFFCF7;
+}
+.contact__card .text-primary {
+  color: #644117 !important;
+}
+.contact__card .form-select {
+  height: 3.25rem;
+  border-radius: 3rem;
+}
+.contact__card .select2-container .select2-selection--single {
+  height: 3.25rem;
+  border-radius: 3rem;
+  font-family: var(--fraunces-font);
+  border-color: #B3B0A9;
+}
+.contact__card .select2-container--open .select2-selection--single {
+  border-radius: 1rem 1rem 0 0;
+}
+.contact__card .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #969288;
+  padding-left: 1.5rem;
+  line-height: 3;
+}
+.contact__card .select2-container--default .select2-selection--single .select2-selection__arrow {
+  width: 3rem;
+  height: 3.25rem;
+}
+
+.select2-results__option {
+  font-family: var(--fraunces-font);
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: transparent !important;
+  color: #6E1C1E !important;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+  background-color: transparent !important;
+  color: #6E1C1E !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border: 0 !important;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000000' d='M12 14.5a.74.74 0 0 1-.53-.22L8 10.78a.75.75 0 0 1 1-1.06l3 3l3-3a.75.75 0 0 1 1 1.06l-3.5 3.5a.74.74 0 0 1-.5.22'/%3E%3C/svg%3E");
+}
+
+.radio__group {
+  box-shadow: 0 23px 26px -22px rgba(100, 74, 42, 0.8);
+  padding: 1px;
+  height: 52px;
+  background: linear-gradient(45deg, #CCAD87 100%, #dda868 30%);
+}
+.radio__group label {
+  background-color: #FFF7EF;
+  height: 50px;
+  color: #969288;
+}
+.radio__group input[type=radio]:checked ~ label {
+  background-color: #FFF2E0;
+  color: #631517;
+}
+
+.filter__pro__card {
+  border: 1px solid #FFF2E0;
+  padding-bottom: 2rem;
+  position: relative;
+}
+.filter__pro__card .seller__tag {
+  background-color: #FFFCF7;
+  color: #490A0C;
+  top: 1rem;
+  right: 1rem;
+}
+.filter__pro__card::before, .filter__pro__card::after {
+  content: "";
+  width: 3.2rem;
+  height: 3.2rem;
+  display: block;
+  background: var(--left-frame-icon) no-repeat center center/cover;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+}
+.filter__pro__card::after {
+  background: var(--right-frame-icon) no-repeat center center/cover;
+  left: auto;
+  right: 0.5rem;
 }/*# sourceMappingURL=style.css.map */

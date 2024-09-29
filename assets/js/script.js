@@ -339,3 +339,35 @@ var creationCarousel = new Swiper('.creationCarousel', {
     prevEl: '.creationCarouselNavBtnPrev',
   },
 });
+
+$(document).ready(function() {
+  $('.select').select2();
+});
+
+
+// Filter Product slider script
+var filterProductCarousel = new Swiper('.filterProductCarousel', {
+  observer: true,  
+  observeParents: true,
+  loop: true,
+  speed: 400,
+  spaceBetween: 24,
+  slidesPerView: 3, 
+  observer: true,  
+  observeParents: true, 
+  breakpoints: { 
+    576: {
+      slidesPerView: 1.4,
+      spaceBetween: 24,
+      centeredSlides: true
+    }, 
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 24
+    }, 
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 24
+    }
+  }, 
+});

@@ -11,8 +11,15 @@
     <!-- CSS: All Vendors -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">  
     <link rel="stylesheet" href="assets/css/swiper.min.css">  
+    <link rel="stylesheet" href="assets/css/select2.min.css">  
     <!-- CSS: Html Designer --> 
     <link rel="stylesheet" href="css/style.css">  
+    <style>
+        :root {
+            --left-frame-icon:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCA1MSA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC43OCI+CjxsaW5lIHgxPSI1MSIgeTE9IjUxLjUxNTIiIHgyPSI0LjEyMTIxIiB5Mj0iNTEuNTE1MiIgc3Ryb2tlPSIjRjRFM0NDIiBzdHJva2Utd2lkdGg9IjEuMDMwMyIvPgo8bGluZSB4MT0iMC41MTUxNTIiIHkxPSIwLjAzMTI1IiB4Mj0iMC41MTUxNTIiIHkyPSI0Ny45MTE2IiBzdHJva2U9IiNGNEUzQ0MiIHN0cm9rZS13aWR0aD0iMS4wMzAzIi8+CjxsaW5lIHgxPSI2LjQzNzI2IiB5MT0iMC4wMzEyNSIgeDI9IjYuNDM3MjYiIHkyPSI1MS4wMDA2IiBzdHJva2U9IiNGNEUzQ0MiIHN0cm9rZS13aWR0aD0iMC41MTUxNTIiLz4KPGxpbmUgeDE9IjMuMzQ3NDIiIHkxPSIwLjAzMTI1IiB4Mj0iMy4zNDc0MiIgeTI9IjUxLjAwMDYiIHN0cm9rZT0iI0Y0RTNDQyIgc3Ryb2tlLXdpZHRoPSIwLjUxNTE1MiIvPgo8bGluZSB4MT0iNTEiIHkxPSI0OC4xNzE2IiB5Mj0iNDguMTcxNiIgc3Ryb2tlPSIjRjRFM0NDIiBzdHJva2Utd2lkdGg9IjAuNTE1MTUyIi8+CjxsaW5lIHgxPSI1MSIgeTE9IjQ1LjA4MTgiIHkyPSI0NS4wODE4IiBzdHJva2U9IiNGNEUzQ0MiIHN0cm9rZS13aWR0aD0iMC41MTUxNTIiLz4KPHBhdGggZD0iTTExLjg0ODEgNTEuNTE2MUgxLjU0NTFDMC45NzYwNzkgNTEuNTE2MSAwLjUxNDc5NyA1MS4wNTQ4IDAuNTE0Nzk3IDUwLjQ4NThWNDAuMTkwMkgxMS44NDgxVjUxLjUxNjFaIiBzdHJva2U9IiNGNEUzQ0MiIHN0cm9rZS13aWR0aD0iMS4wMzAzIi8+CjxwYXRoIGQ9Ik03LjIxMDk0IDUyLjAzMTJIMS41NDQyN0MwLjY5MDczOSA1Mi4wMzEyIC0wLjAwMTE4MzUxIDUxLjMzOTMgLTAuMDAxMTgzNTEgNTAuNDg1OFY0NC44MjM1SDcuMjEwOTRWNTIuMDMxMloiIGZpbGw9IiNGNEUzQ0MiLz4KPC9nPgo8L3N2Zz4K');      
+            --right-frame-icon:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEiIGhlaWdodD0iNTMiIHZpZXdCb3g9IjAgMCA1MSA1MyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgb3BhY2l0eT0iMC43OCI+CjxsaW5lIHkxPSItMC41MTUxNTIiIHgyPSI0Ni44Nzg4IiB5Mj0iLTAuNTE1MTUyIiB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAtMSAwIDUxKSIgc3Ryb2tlPSIjRjRFM0NDIiBzdHJva2Utd2lkdGg9IjEuMDMwMyIvPgo8bGluZSB5MT0iLTAuNTE1MTUyIiB4Mj0iNDcuODgwMyIgeTI9Ii0wLjUxNTE1MiIgdHJhbnNmb3JtPSJtYXRyaXgoMCAxIDEgMCA1MSAwLjAzMTI1KSIgc3Ryb2tlPSIjRjRFM0NDIiBzdHJva2Utd2lkdGg9IjEuMDMwMyIvPgo8bGluZSB5MT0iLTAuMjU3NTc2IiB4Mj0iNTAuOTY5NCIgeTI9Ii0wLjI1NzU3NiIgdHJhbnNmb3JtPSJtYXRyaXgoMCAxIDEgMCA0NC44MjAzIDAuMDMxMjUpIiBzdHJva2U9IiNGNEUzQ0MiIHN0cm9rZS13aWR0aD0iMC41MTUxNTIiLz4KPGxpbmUgeTE9Ii0wLjI1NzU3NiIgeDI9IjUwLjk2OTQiIHkyPSItMC4yNTc1NzYiIHRyYW5zZm9ybT0ibWF0cml4KDAgMSAxIDAgNDcuOTEwMiAwLjAzMTI1KSIgc3Ryb2tlPSIjRjRFM0NDIiBzdHJva2Utd2lkdGg9IjAuNTE1MTUyIi8+CjxsaW5lIHkxPSItMC4yNTc1NzYiIHgyPSI1MSIgeTI9Ii0wLjI1NzU3NiIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCA0Ny45MTQxKSIgc3Ryb2tlPSIjRjRFM0NDIiBzdHJva2Utd2lkdGg9IjAuNTE1MTUyIi8+CjxsaW5lIHkxPSItMC4yNTc1NzYiIHgyPSI1MSIgeTI9Ii0wLjI1NzU3NiIgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgLTEgMCA0NC44MjQyKSIgc3Ryb2tlPSIjRjRFM0NDIiBzdHJva2Utd2lkdGg9IjAuNTE1MTUyIi8+CjxwYXRoIGQ9Ik0zOS4xNTE5IDUxLjUxNjFINDkuNDU0OUM1MC4wMjM5IDUxLjUxNjEgNTAuNDg1MiA1MS4wNTQ4IDUwLjQ4NTIgNTAuNDg1OFY0MC4xOTAySDM5LjE1MTlWNTEuNTE2MVoiIHN0cm9rZT0iI0Y0RTNDQyIgc3Ryb2tlLXdpZHRoPSIxLjAzMDMiLz4KPHBhdGggZD0iTTQzLjc4OTEgNTIuMDMxMkg0OS40NTU3QzUwLjMwOTMgNTIuMDMxMiA1MS4wMDEyIDUxLjMzOTMgNTEuMDAxMiA1MC40ODU4VjQ0LjgyMzVINDMuNzg5MVY1Mi4wMzEyWiIgZmlsbD0iI0Y0RTNDQyIvPgo8L2c+Cjwvc3ZnPgo=');      
+        }
+    </style>
 </head>
 <body> 
     
@@ -1983,13 +1990,491 @@
                     </button>
                     
                 </div><!--.slider__container-->
-
-
  
 
             </div><!--.container-->
         </div>
         <!-- Story wrapper end -->
+
+        <!-- Contact wrapper start -->
+        <div class="py-5">
+            <div class="container">
+                <div class="card p-1 contact__card">
+                    <div class="row g-4">
+                        <div class="col-lg-7">
+                            <div class="p-4">
+                                <div class="d-flex align-items-start">
+                                    <h2 class="fs-1 fw-normal text-dark ff-fraunces col">
+                                        Your Perfect Gold Jewellery, <span class="text-grey d-block">By Tanishq.</span>
+                                    </h2>
+                                    <img src="assets/images/tanishq-logo.png" class="img-fluid" alt="logo" width="80" height="53">
+                                </div>
+                                <form action="#" class="row g-3 mt-1"> 
+                                    <div class="col-12">
+                                        <div class="d-flex gap-3">
+                                            <label for="exquisite" class="form-label lead-sm text-primary pt-2">I am looking for exquisite</label>
+                                            <div class="col">
+                                                <select name="exquisite" id="exquisite" class="form-select ff-fraunces select">
+                                                    <option value="Choose Item">Choose Item</option>
+                                                    <option value="Earrings ">Earrings </option>
+                                                    <option value="Necklace ">Necklace </option>
+                                                    <option value="Best Selling">Best Selling</option>
+                                                    <option value="Recommendations">Recommendations</option>
+                                                </select>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex gap-3">
+                                            <label for="occasion" class="form-label lead-sm text-primary pt-2">for</label>
+                                            <div class="col">
+                                                <select name="occasion" id="occasion" class="form-select ff-fraunces select">
+                                                    <option value="Choose Occasion">Choose Occasion</option>
+                                                    <option value="All">All</option>
+                                                    <option value="Anniversary">Anniversary</option>
+                                                    <option value="Best Selling">Best Selling</option>
+                                                    <option value="Recommendations">Recommendations</option>
+                                                </select>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex gap-3">
+                                            <label for="price_range" class="form-label lead-sm text-primary pt-2">within</label>
+                                            <div class="col">
+                                                <select name="price_range" id="price_range" class="form-select ff-fraunces select">
+                                                    <option value="Choose Price Range">Choose Price Range</option>
+                                                    <option value="&lt;25,000 ">&lt; ₹25,000 </option>
+                                                    <option value="25,000 - ₹50,000">₹25,000 - ₹50,000</option>
+                                                    <option value="50,000 - ₹1,00,000">₹50,000 - ₹1,00,000+</option> 
+                                                </select>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="d-flex gap-3">
+                                            <label for="price_range" class="form-label lead-sm text-primary pt-2">ideally crafted in </label>
+                                            <div class="col">
+                                                <div class="d-flex gap-3">
+                                                    <div class="radio__group d-inline-block rounded-pill">
+                                                        <input type="radio" id="yellow_gold" name="crafted" value="yellow_gold" class="form-check-input position-absolute top-0 start-0 opacity-0">
+                                                        <label for="yellow_gold" class="position-relative d-inline-flex align-items-center rounded-pill pe-3 ps-1 ff-fraunces lead-sm">
+                                                            <img src="assets/images/icons/yellow-gold.png" class="img-fluid" alt="yellow-gold">
+                                                            <span>Yellow gold</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio__group d-inline-block rounded-pill">
+                                                        <input type="radio" id="rose_gold" name="crafted" value="rose_gold" class="form-check-input position-absolute top-0 start-0 opacity-0">
+                                                        <label for="rose_gold" class="position-relative d-inline-flex align-items-center rounded-pill pe-3 ps-1 ff-fraunces lead-sm">
+                                                            <img src="assets/images/icons/rose-gold.png" class="img-fluid" alt="yellow-gold">
+                                                            <span>Yellow gold</span>
+                                                        </label>
+                                                    </div> 
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary explore__btn ff-fraunces small fw-semibold rounded-pill gap-3 px-4 border-0 mt-4">
+                                            <span>View Collection</span>
+                                            <span class="icon d-inline-flex rounded-circle justify-content-center align-items-center">
+                                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 5L13 10L8 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>                                         
+                                            </span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 d-flex">
+                            <img src="assets/images/contact-banner.png" class="img-fluid w-100 object-fit-cover rounded-3" alt="contact banner" width="552" height="462" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div><!--.container-->
+        </div>
+        <!-- Contact wrapper end -->
+
+        <!-- Tab products wrapper start -->
+        <div class="py-4">
+            <div class="container text-center pt-md-4">
+                <img src="assets/images/icons/divider-top.svg" class="img-fluid mb-3" alt="divider" width="116" height="30">
+                <p class="text-uppercase mb-1">Featured Collection</p>
+                <h2 class="ff-fraunces fw-semibold fs-1 gradient__title"> 
+                    Brilliant Gold Creations 
+                </h2>
+                <p class="small">
+                    Step into the world where every piece illuminates your beauty with timeless elegance
+                </p> 
+                <img src="assets/images/icons/divider-bottom.svg" class="img-fluid" alt="divider" width="116" height="30">
+
+                <div class="d-flex justify-content-center mt-4">
+                    <ul class="nav nav-pills custom__nav d-inline-flex border gap-lg-3 rounded-pill p-1 m-0" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative active" id="pills-occasionTab-tab" data-bs-toggle="pill" data-bs-target="#pills-occasionTab" type="button" role="tab" aria-controls="pills-occasionTab" aria-selected="true">Explore by Occasion</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative" id="pills-budgetTab-tab" data-bs-toggle="pill" data-bs-target="#pills-budgetTab" type="button" role="tab" aria-controls="pills-budgetTab" aria-selected="false">Explore by Budget</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative" id="pills-giftTab-tab" data-bs-toggle="pill" data-bs-target="#pills-giftTab" type="button" role="tab" aria-controls="pills-giftTab" aria-selected="false">Gift Cards</button>
+                        </li> 
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative" id="pills-goldCoinTab-tab" data-bs-toggle="pill" data-bs-target="#pills-goldCoinTab" type="button" role="tab" aria-controls="pills-goldCoinTab" aria-selected="false">Gold Coins</button>
+                        </li> 
+                    </ul> 
+                </div>
+                <div class="tab-content position-relative pt-4" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-occasionTab" role="tabpanel" aria-labelledby="pills-occasionTab-tab" tabindex="0">
+                        <div class="swiper-container filterProductCarousel">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide pt-3 pb-5"> 
+                                    <div class="filter__pro__card round">  
+                                        <div class="seller__tag position-absolute rounded-pill px-3 py-2 d-inline-flex align-items-center gap-2">
+                                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.3521 6.56982L15.1023 11.1177L19.8321 12.8006L15.1023 14.4835L13.3521 19.0314L11.6019 14.4835L6.87207 12.8006L11.6019 11.1177L13.3521 6.56982Z" fill="#490A0C"/>
+                                                <path d="M5.79203 4.49268L6.86159 7.20878L9.75203 8.21383L6.86159 9.21888L5.79203 11.935L4.72247 9.21888L1.83203 8.21383L4.72247 7.20878L5.79203 4.49268Z" fill="#490A0C"/>
+                                                <path d="M9.66197 1.03125L10.1724 2.42088L11.552 2.9351L10.1724 3.44931L9.66197 4.83894L9.1515 3.44931L7.77197 2.9351L9.1515 2.42088L9.66197 1.03125Z" fill="#490A0C"/>
+                                            </svg>                                                 
+                                            <span>Bestseller</span>
+                                        </div>
+                                        <a href="#" class="d-block round overflow-hidden">
+                                            <img 
+                                                src="assets/images/under-1-lakh.png" 
+                                                alt="banner" class="img-fluid w-100 object-fit-cover"
+                                            >
+                                        </a>
+                                        <div class="caption pt-3 pt-md-4">
+                                            <h3 class="title fs-4 fw-normal mb-1 ff-fraunces">
+                                                <a href="#">Under 1 lakh</a>
+                                            </h3>
+                                            <p class="small mb-0">Everyday pieces for all the special occasions</p> 
+                                        </div>
+                                    </div>
+                                </div>   
+                                 
+                                 
+                            </div><!--./wrapper-->  
+                        </div><!--./carousel-->
+                    </div><!--trendingNew-->
+
+
+                    <div class="tab-pane fade" id="pills-budgetTab" role="tabpanel" aria-labelledby="pills-budgetTab-tab" tabindex="0">
+                        <div class="swiper-container productCarousel3">
+                            <div class="swiper-wrapper">
+                                <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div class="pro__card p-0 border-0"> 
+                                        <button class="btn p-0 position-absolute whishlist__btn">
+                                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9932 2.63581C8.9938 0.2984 5.65975 -0.330357 3.15469 1.81001C0.649644 3.95038 0.296968 7.52898 2.2642 10.0604C3.89982 12.1651 8.84977 16.6041 10.4721 18.0408C10.6536 18.2016 10.7444 18.2819 10.8502 18.3135C10.9426 18.3411 11.0437 18.3411 11.1361 18.3135C11.2419 18.2819 11.3327 18.2016 11.5142 18.0408C13.1365 16.6041 18.0865 12.1651 19.7221 10.0604C21.6893 7.52898 21.3797 3.92787 18.8316 1.81001C16.2835 -0.307843 12.9925 0.2984 10.9932 2.63581Z" fill="white" stroke="#C09293" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                 
+                                        </button>
+                                        <a href="#" class="d-block">
+                                            <img 
+                                                src="assets/images/Diana-infinity-Ring.png" 
+                                                alt="banner" class="img-fluid w-100 object-fit-cover"
+                                            >
+                                        </a>
+                                        <div class="caption pt-3">
+                                            <h3 class="title fs-6 fw-normal text-uppercase mb-1 ff-fraunces">
+                                                <a href="#">Diana infinity Ring</a>
+                                            </h3>
+                                            <div class="text-dark ff-fraunces">
+                                                <span class="fs-5 fw-light">₹ 17,546</span>
+                                                <del class="del small fw-light ms-3">₹ 20,000</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div class="pro__card p-0 border-0"> 
+                                        <button class="btn p-0 position-absolute whishlist__btn"> 
+                                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9932 2.63581C8.9938 0.2984 5.65975 -0.330357 3.15469 1.81001C0.649644 3.95038 0.296968 7.52898 2.2642 10.0604C3.89982 12.1651 8.84977 16.6041 10.4721 18.0408C10.6536 18.2016 10.7444 18.2819 10.8502 18.3135C10.9426 18.3411 11.0437 18.3411 11.1361 18.3135C11.2419 18.2819 11.3327 18.2016 11.5142 18.0408C13.1365 16.6041 18.0865 12.1651 19.7221 10.0604C21.6893 7.52898 21.3797 3.92787 18.8316 1.81001C16.2835 -0.307843 12.9925 0.2984 10.9932 2.63581Z" fill="white" stroke="#C09293" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                 
+                                        </button>
+                                        <a href="#" class="d-block"> 
+                                            <img 
+                                                src="assets/images/Diana-infinity-Ring-2.png" 
+                                                alt="banner" class="img-fluid w-100 object-fit-cover"
+                                            >
+                                        </a>
+                                        <div class="caption pt-3">
+                                            <h3 class="title fs-6 fw-normal text-uppercase mb-1 ff-fraunces">
+                                                <a href="#">Diana infinity Ring</a>
+                                            </h3>
+                                            <div class="text-dark ff-fraunces">
+                                                <span class="fs-5 fw-light">₹ 17,546</span>
+                                                <del class="del small fw-light ms-3">₹ 20,000</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div class="pro__card p-0 border-0"> 
+                                        <button class="btn p-0 position-absolute whishlist__btn">
+                                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9932 2.63581C8.9938 0.2984 5.65975 -0.330357 3.15469 1.81001C0.649644 3.95038 0.296968 7.52898 2.2642 10.0604C3.89982 12.1651 8.84977 16.6041 10.4721 18.0408C10.6536 18.2016 10.7444 18.2819 10.8502 18.3135C10.9426 18.3411 11.0437 18.3411 11.1361 18.3135C11.2419 18.2819 11.3327 18.2016 11.5142 18.0408C13.1365 16.6041 18.0865 12.1651 19.7221 10.0604C21.6893 7.52898 21.3797 3.92787 18.8316 1.81001C16.2835 -0.307843 12.9925 0.2984 10.9932 2.63581Z" fill="white" stroke="#C09293" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                 
+                                        </button>
+                                        <a href="#" class="d-block"> 
+                                            <img 
+                                                src="assets/images/Diana-infinity-Ring-3.png" 
+                                                alt="banner" class="img-fluid w-100 object-fit-cover"
+                                            >
+                                        </a>
+                                        <div class="caption pt-3">
+                                            <h3 class="title fs-6 fw-normal text-uppercase mb-1 ff-fraunces">
+                                                <a href="#">Diana infinity Ring</a>
+                                            </h3>
+                                            <div class="text-dark ff-fraunces">
+                                                <span class="fs-5 fw-light">₹ 17,546</span>
+                                                <del class="del small fw-light ms-3">₹ 20,000</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div class="pro__card p-0 border-0">
+                                        <button class="btn p-0 position-absolute whishlist__btn"> 
+                                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9932 2.63581C8.9938 0.2984 5.65975 -0.330357 3.15469 1.81001C0.649644 3.95038 0.296968 7.52898 2.2642 10.0604C3.89982 12.1651 8.84977 16.6041 10.4721 18.0408C10.6536 18.2016 10.7444 18.2819 10.8502 18.3135C10.9426 18.3411 11.0437 18.3411 11.1361 18.3135C11.2419 18.2819 11.3327 18.2016 11.5142 18.0408C13.1365 16.6041 18.0865 12.1651 19.7221 10.0604C21.6893 7.52898 21.3797 3.92787 18.8316 1.81001C16.2835 -0.307843 12.9925 0.2984 10.9932 2.63581Z" fill="white" stroke="#C09293" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                 
+                                        </button> 
+                                        <a href="#" class="d-block">
+                                            <img 
+                                                src="assets/images/Diana-infinity-Ring-2.png" 
+                                                alt="banner" class="img-fluid w-100 object-fit-cover"
+                                            >   
+                                        </a>
+                                        <div class="caption pt-3">
+                                            <h3 class="title fs-6 fw-normal text-uppercase mb-1 ff-fraunces">
+                                                <a href="#">Diana infinity Ring</a>
+                                            </h3>
+                                            <div class="text-dark ff-fraunces">
+                                                <span class="fs-5 fw-light">₹ 17,546</span>
+                                                <del class="del small fw-light ms-3">₹ 20,000</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                 
+                            </div><!--./wrapper-->  
+                        </div><!--./carousel-->
+                    </div><!--budgetTab-->
+
+                    <div class="tab-pane fade" id="pills-giftTab" role="tabpanel" aria-labelledby="pills-giftTab-tab" tabindex="0">
+                        <div class="swiper-container productCarousel4"> 
+                            <div class="swiper-wrapper">
+                                <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div class="pro__card p-0 border-0"> 
+                                        <button class="btn p-0 position-absolute whishlist__btn">
+                                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9932 2.63581C8.9938 0.2984 5.65975 -0.330357 3.15469 1.81001C0.649644 3.95038 0.296968 7.52898 2.2642 10.0604C3.89982 12.1651 8.84977 16.6041 10.4721 18.0408C10.6536 18.2016 10.7444 18.2819 10.8502 18.3135C10.9426 18.3411 11.0437 18.3411 11.1361 18.3135C11.2419 18.2819 11.3327 18.2016 11.5142 18.0408C13.1365 16.6041 18.0865 12.1651 19.7221 10.0604C21.6893 7.52898 21.3797 3.92787 18.8316 1.81001C16.2835 -0.307843 12.9925 0.2984 10.9932 2.63581Z" fill="white" stroke="#C09293" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                 
+                                        </button>
+                                        <a href="#" class="d-block">
+                                            <img 
+                                                src="assets/images/Diana-infinity-Ring.png" 
+                                                alt="banner" class="img-fluid w-100 object-fit-cover"
+                                            >
+                                        </a>
+                                        <div class="caption pt-3">
+                                            <h3 class="title fs-6 fw-normal text-uppercase mb-1 ff-fraunces">
+                                                <a href="#">Diana infinity Ring</a>
+                                            </h3>
+                                            <div class="text-dark ff-fraunces">
+                                                <span class="fs-5 fw-light">₹ 17,546</span>
+                                                <del class="del small fw-light ms-3">₹ 20,000</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div class="pro__card p-0 border-0"> 
+                                        <button class="btn p-0 position-absolute whishlist__btn"> 
+                                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9932 2.63581C8.9938 0.2984 5.65975 -0.330357 3.15469 1.81001C0.649644 3.95038 0.296968 7.52898 2.2642 10.0604C3.89982 12.1651 8.84977 16.6041 10.4721 18.0408C10.6536 18.2016 10.7444 18.2819 10.8502 18.3135C10.9426 18.3411 11.0437 18.3411 11.1361 18.3135C11.2419 18.2819 11.3327 18.2016 11.5142 18.0408C13.1365 16.6041 18.0865 12.1651 19.7221 10.0604C21.6893 7.52898 21.3797 3.92787 18.8316 1.81001C16.2835 -0.307843 12.9925 0.2984 10.9932 2.63581Z" fill="white" stroke="#C09293" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                 
+                                        </button>
+                                        <a href="#" class="d-block"> 
+                                            <img 
+                                                src="assets/images/Diana-infinity-Ring-2.png" 
+                                                alt="banner" class="img-fluid w-100 object-fit-cover"
+                                            >
+                                        </a>
+                                        <div class="caption pt-3">
+                                            <h3 class="title fs-6 fw-normal text-uppercase mb-1 ff-fraunces">
+                                                <a href="#">Diana infinity Ring</a>
+                                            </h3>
+                                            <div class="text-dark ff-fraunces">
+                                                <span class="fs-5 fw-light">₹ 17,546</span>
+                                                <del class="del small fw-light ms-3">₹ 20,000</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div class="pro__card p-0 border-0"> 
+                                        <button class="btn p-0 position-absolute whishlist__btn">
+                                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9932 2.63581C8.9938 0.2984 5.65975 -0.330357 3.15469 1.81001C0.649644 3.95038 0.296968 7.52898 2.2642 10.0604C3.89982 12.1651 8.84977 16.6041 10.4721 18.0408C10.6536 18.2016 10.7444 18.2819 10.8502 18.3135C10.9426 18.3411 11.0437 18.3411 11.1361 18.3135C11.2419 18.2819 11.3327 18.2016 11.5142 18.0408C13.1365 16.6041 18.0865 12.1651 19.7221 10.0604C21.6893 7.52898 21.3797 3.92787 18.8316 1.81001C16.2835 -0.307843 12.9925 0.2984 10.9932 2.63581Z" fill="white" stroke="#C09293" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                 
+                                        </button>
+                                        <a href="#" class="d-block"> 
+                                            <img 
+                                                src="assets/images/Diana-infinity-Ring-3.png" 
+                                                alt="banner" class="img-fluid w-100 object-fit-cover"
+                                            >
+                                        </a>
+                                        <div class="caption pt-3">
+                                            <h3 class="title fs-6 fw-normal text-uppercase mb-1 ff-fraunces">
+                                                <a href="#">Diana infinity Ring</a>
+                                            </h3>
+                                            <div class="text-dark ff-fraunces">
+                                                <span class="fs-5 fw-light">₹ 17,546</span>
+                                                <del class="del small fw-light ms-3">₹ 20,000</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div class="pro__card p-0 border-0">
+                                        <button class="btn p-0 position-absolute whishlist__btn"> 
+                                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9932 2.63581C8.9938 0.2984 5.65975 -0.330357 3.15469 1.81001C0.649644 3.95038 0.296968 7.52898 2.2642 10.0604C3.89982 12.1651 8.84977 16.6041 10.4721 18.0408C10.6536 18.2016 10.7444 18.2819 10.8502 18.3135C10.9426 18.3411 11.0437 18.3411 11.1361 18.3135C11.2419 18.2819 11.3327 18.2016 11.5142 18.0408C13.1365 16.6041 18.0865 12.1651 19.7221 10.0604C21.6893 7.52898 21.3797 3.92787 18.8316 1.81001C16.2835 -0.307843 12.9925 0.2984 10.9932 2.63581Z" fill="white" stroke="#C09293" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                 
+                                        </button> 
+                                        <a href="#" class="d-block">
+                                            <img 
+                                                src="assets/images/Diana-infinity-Ring-2.png" 
+                                                alt="banner" class="img-fluid w-100 object-fit-cover"
+                                            >   
+                                        </a>
+                                        <div class="caption pt-3">
+                                            <h3 class="title fs-6 fw-normal text-uppercase mb-1 ff-fraunces">
+                                                <a href="#">Diana infinity Ring</a>
+                                            </h3>
+                                            <div class="text-dark ff-fraunces">
+                                                <span class="fs-5 fw-light">₹ 17,546</span>
+                                                <del class="del small fw-light ms-3">₹ 20,000</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                 
+                            </div><!--./wrapper-->  
+                        </div><!--./carousel-->
+                    </div><!--tryIt--> 
+
+                    <div class="tab-pane fade" id="pills-goldCoinTab" role="tabpanel" aria-labelledby="pills-goldCoinTab-tab" tabindex="0">
+                        <div class="swiper-container productCarousel4"> 
+                            <div class="swiper-wrapper">
+                                <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div class="pro__card p-0 border-0"> 
+                                        <button class="btn p-0 position-absolute whishlist__btn">
+                                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9932 2.63581C8.9938 0.2984 5.65975 -0.330357 3.15469 1.81001C0.649644 3.95038 0.296968 7.52898 2.2642 10.0604C3.89982 12.1651 8.84977 16.6041 10.4721 18.0408C10.6536 18.2016 10.7444 18.2819 10.8502 18.3135C10.9426 18.3411 11.0437 18.3411 11.1361 18.3135C11.2419 18.2819 11.3327 18.2016 11.5142 18.0408C13.1365 16.6041 18.0865 12.1651 19.7221 10.0604C21.6893 7.52898 21.3797 3.92787 18.8316 1.81001C16.2835 -0.307843 12.9925 0.2984 10.9932 2.63581Z" fill="white" stroke="#C09293" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                 
+                                        </button>
+                                        <a href="#" class="d-block">
+                                            <img 
+                                                src="assets/images/Diana-infinity-Ring.png" 
+                                                alt="banner" class="img-fluid w-100 object-fit-cover"
+                                            >
+                                        </a>
+                                        <div class="caption pt-3">
+                                            <h3 class="title fs-6 fw-normal text-uppercase mb-1 ff-fraunces">
+                                                <a href="#">Diana infinity Ring</a>
+                                            </h3>
+                                            <div class="text-dark ff-fraunces">
+                                                <span class="fs-5 fw-light">₹ 17,546</span>
+                                                <del class="del small fw-light ms-3">₹ 20,000</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div class="pro__card p-0 border-0"> 
+                                        <button class="btn p-0 position-absolute whishlist__btn"> 
+                                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9932 2.63581C8.9938 0.2984 5.65975 -0.330357 3.15469 1.81001C0.649644 3.95038 0.296968 7.52898 2.2642 10.0604C3.89982 12.1651 8.84977 16.6041 10.4721 18.0408C10.6536 18.2016 10.7444 18.2819 10.8502 18.3135C10.9426 18.3411 11.0437 18.3411 11.1361 18.3135C11.2419 18.2819 11.3327 18.2016 11.5142 18.0408C13.1365 16.6041 18.0865 12.1651 19.7221 10.0604C21.6893 7.52898 21.3797 3.92787 18.8316 1.81001C16.2835 -0.307843 12.9925 0.2984 10.9932 2.63581Z" fill="white" stroke="#C09293" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                 
+                                        </button>
+                                        <a href="#" class="d-block"> 
+                                            <img 
+                                                src="assets/images/Diana-infinity-Ring-2.png" 
+                                                alt="banner" class="img-fluid w-100 object-fit-cover"
+                                            >
+                                        </a>
+                                        <div class="caption pt-3">
+                                            <h3 class="title fs-6 fw-normal text-uppercase mb-1 ff-fraunces">
+                                                <a href="#">Diana infinity Ring</a>
+                                            </h3>
+                                            <div class="text-dark ff-fraunces">
+                                                <span class="fs-5 fw-light">₹ 17,546</span>
+                                                <del class="del small fw-light ms-3">₹ 20,000</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div class="pro__card p-0 border-0"> 
+                                        <button class="btn p-0 position-absolute whishlist__btn">
+                                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9932 2.63581C8.9938 0.2984 5.65975 -0.330357 3.15469 1.81001C0.649644 3.95038 0.296968 7.52898 2.2642 10.0604C3.89982 12.1651 8.84977 16.6041 10.4721 18.0408C10.6536 18.2016 10.7444 18.2819 10.8502 18.3135C10.9426 18.3411 11.0437 18.3411 11.1361 18.3135C11.2419 18.2819 11.3327 18.2016 11.5142 18.0408C13.1365 16.6041 18.0865 12.1651 19.7221 10.0604C21.6893 7.52898 21.3797 3.92787 18.8316 1.81001C16.2835 -0.307843 12.9925 0.2984 10.9932 2.63581Z" fill="white" stroke="#C09293" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                 
+                                        </button>
+                                        <a href="#" class="d-block"> 
+                                            <img 
+                                                src="assets/images/Diana-infinity-Ring-3.png" 
+                                                alt="banner" class="img-fluid w-100 object-fit-cover"
+                                            >
+                                        </a>
+                                        <div class="caption pt-3">
+                                            <h3 class="title fs-6 fw-normal text-uppercase mb-1 ff-fraunces">
+                                                <a href="#">Diana infinity Ring</a>
+                                            </h3>
+                                            <div class="text-dark ff-fraunces">
+                                                <span class="fs-5 fw-light">₹ 17,546</span>
+                                                <del class="del small fw-light ms-3">₹ 20,000</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div class="pro__card p-0 border-0">
+                                        <button class="btn p-0 position-absolute whishlist__btn"> 
+                                            <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9932 2.63581C8.9938 0.2984 5.65975 -0.330357 3.15469 1.81001C0.649644 3.95038 0.296968 7.52898 2.2642 10.0604C3.89982 12.1651 8.84977 16.6041 10.4721 18.0408C10.6536 18.2016 10.7444 18.2819 10.8502 18.3135C10.9426 18.3411 11.0437 18.3411 11.1361 18.3135C11.2419 18.2819 11.3327 18.2016 11.5142 18.0408C13.1365 16.6041 18.0865 12.1651 19.7221 10.0604C21.6893 7.52898 21.3797 3.92787 18.8316 1.81001C16.2835 -0.307843 12.9925 0.2984 10.9932 2.63581Z" fill="white" stroke="#C09293" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                 
+                                        </button> 
+                                        <a href="#" class="d-block">
+                                            <img 
+                                                src="assets/images/Diana-infinity-Ring-2.png" 
+                                                alt="banner" class="img-fluid w-100 object-fit-cover"
+                                            >   
+                                        </a>
+                                        <div class="caption pt-3">
+                                            <h3 class="title fs-6 fw-normal text-uppercase mb-1 ff-fraunces">
+                                                <a href="#">Diana infinity Ring</a>
+                                            </h3>
+                                            <div class="text-dark ff-fraunces">
+                                                <span class="fs-5 fw-light">₹ 17,546</span>
+                                                <del class="del small fw-light ms-3">₹ 20,000</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>   
+                                 
+                            </div><!--./wrapper-->  
+                        </div><!--./carousel-->
+                    </div><!--tryIt--> 
+                </div><!--.tab-content-->
+            </div><!--.container-->
+        </div>
+        <!-- Tab products wrapper end -->
 
 
     </main>
@@ -2025,6 +2510,7 @@
     <script src="assets/js/jQuery.min.js"></script>  
     <script src="assets/js/bootstrap.bundle.min.js"></script>  
     <script src="assets/js/swiper.min.js"></script>  
+    <script src="assets/js/select2.min.js"></script>  
     <!-- JS: Designer Script -->
     <script src="assets/js/script.js"></script>  
  
