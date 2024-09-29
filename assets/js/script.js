@@ -348,6 +348,10 @@ var creationCarousel = new Swiper('.creationCarousel', {
 
 $(document).ready(function() {
   $('.select').select2();
+
+  $(".select").select2({
+    dropdownParent: $("#contactModal")
+  });
 });
 
 
@@ -511,4 +515,18 @@ var experienceCarousel = new Swiper('.experienceCarousel', {
       spaceBetween: 22
     }
   }, 
+});
+
+
+
+var cardCarousel = new Swiper(".cardCarousel", {
+  effect: "cards",
+  grabCursor: true,
+  initialSlide: 2,
+  speed: 500,
+  loop: true,
+  rotate: true,
+  mousewheel: {
+    invert: false,
+  },
 });
