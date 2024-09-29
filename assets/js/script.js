@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
       clickable: true,
     },
   });
+
+
 });
 
 
@@ -58,13 +60,15 @@ window.addEventListener('resize', function () {
 
   
 
+document.addEventListener('DOMContentLoaded', function () {
+
 var mainslider = new Swiper('.threeItmeCarousel', {
   observer: true,  
   observeParents: true,
   loop: true,
   speed: 400,
   spaceBetween: 12,
-  slidesPerView: 3, 
+  slidesPerView: 1, 
   observer: true,  
   observeParents: true, 
   breakpoints: { 
@@ -91,22 +95,25 @@ var productCarousel = new Swiper('.productCarousel', {
   loop: true,
   speed: 400,
   spaceBetween: 36,
-  slidesPerView: 4, 
+  slidesPerView: 1.4,  
+  centeredSlides: true,
   observer: true,  
   observeParents: true, 
   breakpoints: { 
     576: {
       slidesPerView: 1.4,
       spaceBetween: 12,
-      centeredSlides: true
+      centeredSlides: false
     }, 
     992: {
       slidesPerView: 2,
-      spaceBetween: 12
+      spaceBetween: 12,
+      centeredSlides: false
     }, 
     1200: {
       slidesPerView: 3,
-      spaceBetween: 36
+      spaceBetween: 36,
+      centeredSlides: false
     }
   },
 });
@@ -169,7 +176,7 @@ var galleryCarousel = new Swiper('.galleryCarousel', {
   loop: true,
   speed: 400,
   spaceBetween: 36,
-  slidesPerView: 1.2, 
+  slidesPerView: 1, 
   observer: true,  
   observeParents: true, 
   breakpoints: { 
@@ -179,12 +186,14 @@ var galleryCarousel = new Swiper('.galleryCarousel', {
       centeredSlides: true
     }, 
     992: {
-      slidesPerView: 2,
-      spaceBetween: 12
+      slidesPerView: 1,
+      spaceBetween: 12,
+      centeredSlides: false
     }, 
     1200: {
-      slidesPerView: 3,
-      spaceBetween: 36
+      slidesPerView: 1.4,
+      spaceBetween: 36,
+      centeredSlides: false
     }
   },
 });
@@ -197,14 +206,15 @@ var productThreeItemCarousel = new Swiper('.productThreeItemCarousel', {
   loop: true,
   speed: 400,
   spaceBetween: 36,
-  slidesPerView: 3, 
+  slidesPerView: 1.4, 
+  centeredSlides: true,
   observer: true,  
   observeParents: true, 
   breakpoints: { 
     576: {
-      slidesPerView: 1.4,
+      slidesPerView: 2,
       spaceBetween: 12,
-      centeredSlides: true
+      centeredSlides: false
     }, 
     992: {
       slidesPerView: 2,
@@ -224,20 +234,24 @@ var productCarousel2 = new Swiper('.productCarousel2', {
   loop: true,
   speed: 400,
   spaceBetween: 36,
-  slidesPerView: 4, 
+  slidesPerView: 2.4, 
   observer: true,  
   observeParents: true, 
   breakpoints: { 
     576: {
-      slidesPerView: 2.2,
+      slidesPerView: 2,
       spaceBetween: 12, 
     }, 
     992: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 12
     }, 
     1200: {
       slidesPerView: 3,
+      spaceBetween: 36
+    },
+    1400: {
+      slidesPerView: 4,
       spaceBetween: 36
     }
   },
@@ -256,20 +270,24 @@ var productCarousel3 = new Swiper('.productCarousel3', {
   loop: true,
   speed: 400,
   spaceBetween: 36,
-  slidesPerView: 4, 
+  slidesPerView: 2.4, 
   observer: true,  
   observeParents: true, 
   breakpoints: { 
     576: {
-      slidesPerView: 2.2,
+      slidesPerView: 2,
       spaceBetween: 12, 
     }, 
     992: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 12
     }, 
     1200: {
       slidesPerView: 3,
+      spaceBetween: 36
+    },
+    1400: {
+      slidesPerView: 4,
       spaceBetween: 36
     }
   },
@@ -288,20 +306,24 @@ var productCarousel4 = new Swiper('.productCarousel4', {
   loop: true,
   speed: 400,
   spaceBetween: 36,
-  slidesPerView: 4, 
+  slidesPerView: 2.4, 
   observer: true,  
   observeParents: true, 
   breakpoints: { 
     576: {
-      slidesPerView: 2.2,
+      slidesPerView: 2,
       spaceBetween: 12, 
     }, 
     992: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 12
     }, 
     1200: {
       slidesPerView: 3,
+      spaceBetween: 36
+    },
+    1400: {
+      slidesPerView: 4,
       spaceBetween: 36
     }
   },
@@ -362,12 +384,12 @@ var filterProductCarousel = new Swiper('.filterProductCarousel', {
   loop: true,
   speed: 400,
   spaceBetween: 24,
-  slidesPerView: 3, 
+  slidesPerView: 1.2, 
   observer: true,  
   observeParents: true, 
   breakpoints: { 
     576: {
-      slidesPerView: 1.2,
+      slidesPerView: 2,
       spaceBetween: 24, 
     }, 
     992: {
@@ -471,13 +493,13 @@ var blogCarousel = new Swiper('.blogCarousel', {
   loop: true,
   speed: 400,
   spaceBetween: 20,
-  slidesPerView: 3.4, 
+  slidesPerView: 1, 
   observer: true,  
   centeredSlides: true,
   observeParents: true, 
   breakpoints: { 
     576: {
-      slidesPerView: 1.2,
+      slidesPerView: 1,
       spaceBetween: 24, 
     }, 
     992: {
@@ -489,6 +511,9 @@ var blogCarousel = new Swiper('.blogCarousel', {
       spaceBetween: 24
     }
   }, 
+  pagination: {
+    el: '.blogCarouselPagination', 
+  },
 });
 
 // Blog slider script
@@ -498,7 +523,7 @@ var experienceCarousel = new Swiper('.experienceCarousel', {
   loop: true,
   speed: 400,
   spaceBetween: 22,
-  slidesPerView: 3, 
+  slidesPerView: 1, 
   observer: true,   
   observeParents: true, 
   breakpoints: { 
@@ -515,18 +540,17 @@ var experienceCarousel = new Swiper('.experienceCarousel', {
       spaceBetween: 22
     }
   }, 
+  pagination: {
+    el: '.experienceCarouselPagination', 
+  },
 });
 
 
 
 var cardCarousel = new Swiper(".cardCarousel", {
   effect: "cards",
-  grabCursor: true,
-  initialSlide: 2,
-  speed: 500,
-  loop: true,
-  rotate: true,
-  mousewheel: {
-    invert: false,
-  },
+      grabCursor: true,
+});
+
+
 });

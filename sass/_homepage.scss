@@ -169,28 +169,26 @@
     }
 }
 .explore__btn {
-    background: linear-gradient(90deg, #832729 0%, #631517 100%);
+    backdrop-filter: blur(24px);
+        background: linear-gradient(90deg,rgba(131, 39, 41, 0.6) 0%, rgba(99, 21, 23, 0.6) 100%);
+    
     height: 4rem;transition:all .3s ease-in-out;padding-right: 1rem !important;
 
     .icon {
-        background-color: #832729;width: 2.62rem;height: 2.62rem;
-        -webkit-box-shadow: inset -1px -1px 4px 0px rgba(131,39,40,0.67), inset 16px 16px 15px 4px rgba(73, 10, 12, 0.57);
-        -moz-box-shadow: inset -1px -1px 4px 0px rgba(131,39,40,0.67), inset 16px 16px 15px 4px rgba(73, 10, 12, 0.57);
-        box-shadow: inset -1px -1px 4px 0px rgba(131,39,40,0.67), inset 16px 16px 15px 4px rgba(73, 10, 12, 0.57);
+        background-color: #a76767;box-shadow: inset 16px 16px 16px 4px rgba(99, 21, 23, 0.31), inset -1px -1px 4px 0 #a76767;background: #a76767;
+        width: 2.62rem;height: 2.62rem;
         transition: all .3s ease-in-out;
         
     }
     &:hover, &:focus, &:active { 
-        backdrop-filter: blur(24px);
-        background: linear-gradient(
-            90deg,
-            rgba(131, 39, 41, 0.6) 0%,
-            rgba(99, 21, 23, 0.6) 100%
-        );
+        background: linear-gradient(90deg, #832729 0%, #631517 100%);
 
-        .icon { background-color: #a76767;box-shadow: inset 16px 16px 16px 4px rgba(99, 21, 23, 0.31),
-            inset -1px -1px 4px 0 #a76767;
-          background: #a76767; }
+        .icon { 
+            background-color: #832729;
+            -webkit-box-shadow: inset -1px -1px 4px 0px rgba(131,39,40,0.67), inset 16px 16px 15px 4px rgba(73, 10, 12, 0.57);
+            -moz-box-shadow: inset -1px -1px 4px 0px rgba(131,39,40,0.67), inset 16px 16px 15px 4px rgba(73, 10, 12, 0.57);
+            box-shadow: inset -1px -1px 4px 0px rgba(131,39,40,0.67), inset 16px 16px 15px 4px rgba(73, 10, 12, 0.57);
+         }
     }
 
     &.outline {
@@ -792,3 +790,5 @@
         }
     }
 }
+
+.swiper-container { overflow: hidden; }
