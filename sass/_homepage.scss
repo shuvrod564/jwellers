@@ -788,7 +788,7 @@
     }
 }
 
-.h-320 { height: 220px !important; }
+.h-320 { height: 400px !important; }
 
 .exchange__box .desktop_frame {
     min-height: 550px;
@@ -798,6 +798,7 @@
     .exchange__box {
         min-height: 678px;
     }
+    .h-320 { height: 320px !important; }
 }
   
 @media(max-width:1199px) {

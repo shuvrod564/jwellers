@@ -1157,7 +1157,7 @@ ul li {
   }
 }
 .h-320 {
-  height: 220px !important;
+  height: 400px !important;
 }
 
 .exchange__box .desktop_frame {
@@ -1167,6 +1167,9 @@ ul li {
 @media (max-width: 991px) {
   .exchange__box {
     min-height: 678px;
+  }
+  .h-320 {
+    height: 320px !important;
   }
 }
 @media (max-width: 1199px) {
