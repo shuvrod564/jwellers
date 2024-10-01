@@ -169,7 +169,7 @@ var galleryCarousel = new Swiper('.galleryCarousel', {
       centeredSlides: true
     }, 
     992: {
-      slidesPerView: 1,
+      slidesPerView: 1.4,
       spaceBetween: 12,
       centeredSlides: false
     }, 

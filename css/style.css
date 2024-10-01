@@ -1277,10 +1277,15 @@ ul li {
   left: 2rem;
 }
 .galleryCarousel .galleryCarouselNavBtnNext {
-  right: 2rem;
+  right: 10%;
   left: auto;
 }
 
+@media (max-width: 991px) {
+  .galleryCarousel .galleryCarouselNavBtnNext {
+    right: 2rem;
+  }
+}
 .cardCarousel .swiper-slide {
   width: auto;
 }

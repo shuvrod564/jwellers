@@ -900,7 +900,12 @@
  
     }
     .galleryCarouselNavBtnPrev { left: 2rem; }
-    .galleryCarouselNavBtnNext { right: 2rem;left: auto; }
+    .galleryCarouselNavBtnNext { right: 10%;left: auto; }
+}
+@media(max-width:991px) {
+    .galleryCarousel {  
+        .galleryCarouselNavBtnNext { right: 2rem; }
+    }
 }
 
 .cardCarousel .swiper-slide {
