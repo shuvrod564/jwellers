@@ -120,32 +120,6 @@ var productCarousel = new Swiper('.productCarousel', {
 
  
  
-// Video play button script
-const video = document.getElementById('video');
-const playButton = document.getElementById('play-button');
-
-playButton.addEventListener('click', () => {
-    if (video.paused) {
-        video.play();
-        playButton.classList.add('d-none');
-    }
-});
-
-video.addEventListener('click', () => {
-    if (video.paused) {
-        video.play();
-        playButton.classList.add('hidden');
-    } else {
-        video.pause();
-        playButton.classList.remove('d-none');
-    }
-});
-
-video.addEventListener('ended', () => {
-    playButton.classList.remove('d-none');
-});
-
-
 
 document.querySelectorAll('.category__item').forEach(item => {
   item.addEventListener('click', function() {

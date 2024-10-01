@@ -52,11 +52,19 @@
                 </div><!--./wrapper--> 
                 <div class="swiper-pagination heroBannerCarouselPagination"></div> 
             </div><!--./carousel-->
+
+            <div class="position-absolute start-50 translate-middle-x pagination__box rounded-pill px-4 py-3 d-inline-flex align-items-center">
+                <a href="#explore-categories">Explore Categories</a>
+                <a href="#collections">Collections</a>
+                <a href="#occasions">Occasions</a>
+                <a href="#craftsmanship">Craftsmanship</a>
+                <a href="#gold-exchange">Gold exchange</a>
+            </div>
         </div><!--.container--> 
         <!-- Header slider wrapper end -->
 
         <!-- Category wrapper start -->
-        <div class="py-5">
+        <div class="py-5 position-relative" id="explore-categories"> 
             <div class="container py-md-4">
                 <div class="text-center mb-4 mb-lg-5">
                     <img src="assets/images/icons/divider-top.svg" class="img-fluid" alt="divider" width="116" height="30">
@@ -874,8 +882,127 @@
         </div>
         <!-- Category wrapper end -->
 
+        <!-- Info wrapper start -->
+        <div class="py-5 d-none d-lg-block">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="card info__card">
+                            <div class="card-body">
+                                <h2 class="fs-1 ff-fraunces text-dark fw-normal spacing-narrow">Beautiful Hands - An Initiative by Tanishq</h2>
+                                <p class="lead-sm">Kundan jewelry, an ancient Indian craft, features pure gold and gemstones inlaid with precision. Rooted in royal heritage, each piece tells a story of love and legacy, making it a timeless treasure.</p>
+
+                                <a href="#" class="btn btn-primary explore__btn ff-fraunces small fw-semibold rounded-pill gap-3 px-4 py-3 border-0">
+                                    <span>Learn More</span>
+                                    <span class="icon d-inline-flex rounded-circle justify-content-center align-items-center">
+                                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 5L13 10L8 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                         
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card highligt__card p-4">
+                            <div class="position-relative product d-flex justify-content-center align-items-center">
+                                <img src="assets/images/highlight-ring.png" class="img-fluid" alt="ring">
+                                <div class="position-absolute pointer">
+                                    <span class="icon d-flex justify-content-center align-items-center"></span>
+                                    <span class="tag position-absolute start-0 px-3 py-3 text-dark ff-fraunces fw-normal bg-white text-nowrap">Casual wear</span>
+                                </div>
+                                <div class="position-absolute pointer second">
+                                    <span class="icon d-flex justify-content-center align-items-center"></span>
+                                    <span class="tag position-absolute start-0 px-3 py-3 text-dark ff-fraunces fw-normal bg-white text-nowrap">22k Gold</span>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-4 caption p-3 mt-5">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="col">
+                                        <h4 class="ff-fraunces fs-6 fw-normal text-dark lh-sm mb-0">
+                                            <a href="#">Statement Gold Finger Ring</a>
+                                        </h4>
+                                        <div class="d-flex align-items-center">
+                                            <span class="fs-5 ff-fraunces font-normal text-dark">35,000/-</span>
+                                            <small class="text-primary">20% off</small>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn p-0 btn__arrow rounded-circle">
+                                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_16_760)">
+                                            <path d="M8.16028 1.63965C9.23081 4.12054 10.5974 5.25929 13.875 7.13701" stroke="#490A0C" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M0.8125 7.1377L13.8747 7.1377" stroke="#490A0C" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M8.15479 12.6396C9.22532 10.1588 10.5919 9.02001 13.8695 7.14229" stroke="#490A0C" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_16_760">
+                                            <rect width="13.75" height="13.75" fill="white" transform="translate(0.125 0.264648)"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                                     
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="position-relative rounded-4 overflow-hidden video__box"> 
+                            <video id="video2" width="640" height="360" poster="assets/images/portrait-video-banner.png" class="video">
+                                <source src="assets/images/video/video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video> 
+                            <button type="button" id="play-button2" class="btn btn-white position-absolute start-50 translate-middle bottom-auto top-50 rounded-circle overflow-hidden">
+                                <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/>
+                                </svg>                             
+                            </button>
+                            <script>
+                                const video2 = document.getElementById('video2');
+                                const playButton2 = document.getElementById('play-button2');
+
+                                // SVG icons for play and pause
+                                const playIcon2 = `<svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/
+                                </svg>`;
+                                const pauseIcon2 = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="#000000" d="M216 48v160a16 16 0 0 1-16 16h-40a16 16 0 0 1-16-16V48a16 16 0 0 1 16-16h40a16 16 0 0 1 16 16M96 32H56a16 16 0 0 0-16 16v160a16 16 0 0 0 16 16h40a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16"/></svg>`;
+
+                                // Initially set the play icon
+                                playButton2.innerHTML = playIcon2;
+
+                                playButton2.addEventListener('click', () => {
+                                    if (video2.paused) {
+                                        video2.play();
+                                        playButton2.innerHTML = pauseIcon2; // Set to pause icon when playing
+                                    } else {
+                                        video2.pause();
+                                        playButton2.innerHTML = playIcon2; // Set to play icon when paused
+                                    }
+                                });
+
+                                video2.addEventListener('click', () => {
+                                    if (video2.paused) {
+                                        video2.play();
+                                        playButton2.innerHTML = pauseIcon2; // Set to pause icon when playing
+                                    } else {
+                                        video2.pause();
+                                        playButton2.innerHTML = playIcon2; // Set to play icon when paused
+                                    }
+                                });
+
+                                video2.addEventListener('ended', () => {
+                                    playButton2.innerHTML = playIcon2; // Reset to play icon when video ends
+                                });
+
+                            </script>
+                        </div>
+                    </div>
+                </div><!--.row-->
+            </div><!--.container-->
+        </div>
+        <!-- Info wrapper end -->
+        
         <!-- Video wrapper start -->
-        <div class="py-5">
+        <div class="py-5" id="collections">
             <div class="container mobile__full__width">
                 <div class="video__wrapper">
                     <div class="position-relative rounded-4 overflow-hidden video__box"> 
@@ -883,14 +1010,50 @@
                             <source src="assets/images/video/video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
-                     
-    
+                    
                         <button type="button" id="play-button" class="btn btn-white position-absolute start-50 translate-middle-x rounded-circle overflow-hidden">
                             <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/>
                             </svg>                             
                         </button>
                     </div>
+                    
+                    <script>
+                        const video = document.getElementById('video');
+                        const playButton = document.getElementById('play-button');
+                    
+                        // SVG icons for play and pause
+                        const playIcon = `<svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/></svg>`;
+                        const pauseIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="#000000" d="M216 48v160a16 16 0 0 1-16 16h-40a16 16 0 0 1-16-16V48a16 16 0 0 1 16-16h40a16 16 0 0 1 16 16M96 32H56a16 16 0 0 0-16 16v160a16 16 0 0 0 16 16h40a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16"/></svg>`;
+                    
+                        // Initially set the play icon
+                        playButton.innerHTML = playIcon;
+                    
+                        playButton.addEventListener('click', () => {
+                            if (video.paused) {
+                                video.play();
+                                playButton.innerHTML = pauseIcon; // Set to pause icon when playing
+                            } else {
+                                video.pause();
+                                playButton.innerHTML = playIcon; // Set to play icon when paused
+                            }
+                        });
+                    
+                        video.addEventListener('click', () => {
+                            if (video.paused) {
+                                video.play();
+                                playButton.innerHTML = pauseIcon; // Set to pause icon when playing
+                            } else {
+                                video.pause();
+                                playButton.innerHTML = playIcon; // Set to play icon when paused
+                            }
+                        });
+                    
+                        video.addEventListener('ended', () => {
+                            playButton.innerHTML = playIcon; // Reset to play icon when video ends
+                        });
+                    </script>
+                    
     
                     <div class="px-sm-5 pt-sm-5 pt-4 pb-3 pb-md-5 position-relative">
                         <div class="px-md-5"> 
@@ -1012,114 +1175,7 @@
                 </div><!--.video__wrapper-->
             </div><!--.container-->
          </div>
-        <!-- Video wrapper end -->
-
-        <!-- Info wrapper start -->
-        <div class="py-5 d-none d-lg-block">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-lg-4">
-                        <div class="card info__card">
-                            <div class="card-body">
-                                <h2 class="fs-1 ff-fraunces text-dark fw-normal spacing-narrow">Beautiful Hands - An Initiative by Tanishq</h2>
-                                <p class="lead-sm">Kundan jewelry, an ancient Indian craft, features pure gold and gemstones inlaid with precision. Rooted in royal heritage, each piece tells a story of love and legacy, making it a timeless treasure.</p>
-
-                                <a href="#" class="btn btn-primary explore__btn ff-fraunces small fw-semibold rounded-pill gap-3 px-4 py-3 border-0">
-                                    <span>Learn More</span>
-                                    <span class="icon d-inline-flex rounded-circle justify-content-center align-items-center">
-                                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8 5L13 10L8 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>                                         
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card highligt__card p-4">
-                            <div class="position-relative product d-flex justify-content-center align-items-center">
-                                <img src="assets/images/highlight-ring.png" class="img-fluid" alt="ring">
-                                <div class="position-absolute pointer">
-                                    <span class="icon d-flex justify-content-center align-items-center"></span>
-                                    <span class="tag position-absolute start-0 px-3 py-3 text-dark ff-fraunces fw-normal bg-white text-nowrap">Casual wear</span>
-                                </div>
-                                <div class="position-absolute pointer second">
-                                    <span class="icon d-flex justify-content-center align-items-center"></span>
-                                    <span class="tag position-absolute start-0 px-3 py-3 text-dark ff-fraunces fw-normal bg-white text-nowrap">22k Gold</span>
-                                </div>
-                            </div>
-                            <div class="bg-white rounded-4 caption p-3 mt-5">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="col">
-                                        <h4 class="ff-fraunces fs-6 fw-normal text-dark lh-sm mb-0">
-                                            <a href="#">Statement Gold Finger Ring</a>
-                                        </h4>
-                                        <div class="d-flex align-items-center">
-                                            <span class="fs-5 ff-fraunces font-normal text-dark">35,000/-</span>
-                                            <small class="text-primary">20% off</small>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="btn p-0 btn__arrow rounded-circle">
-                                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_16_760)">
-                                            <path d="M8.16028 1.63965C9.23081 4.12054 10.5974 5.25929 13.875 7.13701" stroke="#490A0C" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M0.8125 7.1377L13.8747 7.1377" stroke="#490A0C" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M8.15479 12.6396C9.22532 10.1588 10.5919 9.02001 13.8695 7.14229" stroke="#490A0C" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_16_760">
-                                            <rect width="13.75" height="13.75" fill="white" transform="translate(0.125 0.264648)"></rect>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>                                                     
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="position-relative rounded-4 overflow-hidden video__box"> 
-                            <video id="video2" width="640" height="360" poster="assets/images/portrait-video-banner.png" class="video">
-                                <source src="assets/images/video/video.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video> 
-                            <button type="button" id="play-button2" class="btn btn-white position-absolute start-50 translate-middle bottom-auto top-50 rounded-circle overflow-hidden">
-                                <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/>
-                                </svg>                             
-                            </button>
-                            <script>
-                                const video2 = document.getElementById('video2');
-                                const playButton2 = document.getElementById('play-button2');
-
-                                playButton2.addEventListener('click', () => {
-                                    if (video2.paused) {
-                                        video2.play();
-                                        playButton2.classList.add('d-none');
-                                    }
-                                });
-
-                                video2.addEventListener('click', () => {
-                                    if (video2.paused) {
-                                        video2.play();
-                                        playButton2.classList.add('hidden');
-                                    } else {
-                                        video2.pause();
-                                        playButton2.classList.remove('d-none');
-                                    }
-                                });
-
-                                video2.addEventListener('ended', () => {
-                                    playButton2.classList.remove('d-none');
-                                });
-                            </script>
-                        </div>
-                    </div>
-                </div><!--.row-->
-            </div><!--.container-->
-        </div>
-        <!-- Info wrapper end -->
+        <!-- Video wrapper end --> 
 
         <!-- Story wrapper start -->
         <div class="pb-5 pt-lg-0">
@@ -1278,7 +1334,7 @@
         <!-- Story wrapper end -->
 
         <!-- Gold Collection Wrapper start -->
-        <div class="pb-5 pt-3 text-center">
+        <div class="pb-5 pt-3 text-center" id="occasions">
             <div class="container"> 
                 <img src="assets/images/icons/divider-top.svg" class="img-fluid mb-3" alt="divider" width="116" height="30">
                 <p class="text-uppercase mb-1">Featured Collection</p>
@@ -1734,7 +1790,7 @@
         <!-- Tab products wrapper end -->
 
         <!-- Story wrapper start -->
-        <div class="py-5">
+        <div class="py-5" id="craftsmanship">
             <div class="container">
                 <div class="position-relative">
                     <div class="swiper-container creationCarousel w-100">
@@ -1777,26 +1833,37 @@
                                                 const video3 = document.getElementById('video3');
                                                 const playButton3 = document.getElementById('play-button3');
                 
+                                                // SVG icons for play and pause
+                                                const playIcon3 = `<svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/
+                                                </svg>`;
+                                                const pauseIcon3 = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="#000000" d="M216 48v160a16 16 0 0 1-16 16h-40a16 16 0 0 1-16-16V48a16 16 0 0 1 16-16h40a16 16 0 0 1 16 16M96 32H56a16 16 0 0 0-16 16v160a16 16 0 0 0 16 16h40a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16"/></svg>`;
+                
+                                                // Initially set the play icon
+                                                playButton3.innerHTML = playIcon3;
+                
                                                 playButton3.addEventListener('click', () => {
                                                     if (video3.paused) {
                                                         video3.play();
-                                                        playButton3.classList.add('d-none');
+                                                        playButton3.innerHTML = pauseIcon3; // Set to pause icon when playing
+                                                    } else {
+                                                        video3.pause();
+                                                        playButton3.innerHTML = playIcon3; // Set to play icon when paused
                                                     }
                                                 });
                 
                                                 video3.addEventListener('click', () => {
                                                     if (video3.paused) {
                                                         video3.play();
-                                                        playButton3.classList.add('hidden');
+                                                        playButton3.innerHTML = pauseIcon3; // Set to pause icon when playing
                                                     } else {
                                                         video3.pause();
-                                                        playButton3.classList.remove('d-none');
+                                                        playButton3.innerHTML = playIcon3; // Set to play icon when paused
                                                     }
                                                 });
                 
                                                 video3.addEventListener('ended', () => {
-                                                    playButton3.classList.remove('d-none');
-                                                });
+                                                    playButton3.innerHTML = playIcon3; // Reset to play icon when video ends
+                                                }); 
                                             </script>
                                         </div>
                                     </div>
@@ -2634,9 +2701,9 @@
             </div><!--.//container-->
         </div>
         <!-- Guide wrapper end -->
-
+ 
         <!-- Exchange wrapper start -->
-        <div class="py-5">
+        <div class="py-5" id="gold-exchange">
             <div class="container">
                 <div class="exchange__box p-lg-5 position-relative mx-auto" style="max-width: 1050px;">
                     <img src="assets/images/exchange-frame-bg.svg" class="frame d-none d-md-inline-block img-fluid w-100 h-100 object-fit-contain position-absolute top-0 start-0" alt="frame-bg">
@@ -2670,28 +2737,39 @@
                                 </button>
                                 <script>
                                     const videoEx = document.getElementById('videoEx');
-                                    const playButtonEx = document.getElementById('play-buttonEx');
+                                    const playbuttonEx = document.getElementById('play-buttonEx');
     
-                                    playButtonEx.addEventListener('click', () => {
+                                    // SVG icons for play and pause
+                                    const playIcon4 = `<svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/
+                                    </svg>`;
+                                    const pauseIcon4 = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="#000000" d="M216 48v160a16 16 0 0 1-16 16h-40a16 16 0 0 1-16-16V48a16 16 0 0 1 16-16h40a16 16 0 0 1 16 16M96 32H56a16 16 0 0 0-16 16v160a16 16 0 0 0 16 16h40a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16"/></svg>`;
+    
+                                    // Initially set the play icon
+                                    playbuttonEx.innerHTML = playIcon4;
+    
+                                    playbuttonEx.addEventListener('click', () => {
                                         if (videoEx.paused) {
                                             videoEx.play();
-                                            playButtonEx.classList.add('d-none');
+                                            playbuttonEx.innerHTML = pauseIcon4; // Set to pause icon when playing
+                                        } else {
+                                            videoEx.pause();
+                                            playbuttonEx.innerHTML = playIcon4; // Set to play icon when paused
                                         }
                                     });
     
                                     videoEx.addEventListener('click', () => {
                                         if (videoEx.paused) {
                                             videoEx.play();
-                                            playButtonEx.classList.add('hidden');
+                                            playbuttonEx.innerHTML = pauseIcon4; // Set to pause icon when playing
                                         } else {
                                             videoEx.pause();
-                                            playButtonEx.classList.remove('d-none');
+                                            playbuttonEx.innerHTML = playIcon4; // Set to play icon when paused
                                         }
                                     });
     
                                     videoEx.addEventListener('ended', () => {
-                                        playButtonEx.classList.remove('d-none');
-                                    });
+                                        playbuttonEx.innerHTML = playIcon3; // Reset to play icon when video ends
+                                    }); 
                                 </script>
                             </div>
                         </div>
