@@ -516,7 +516,10 @@ const Articalswiper = new Swiper('.blogCarousel', {
 
   // If we need pagination
 
- 
+  navigation: {
+    nextEl: '.blogCarouselNavBtnNext',
+    prevEl: '.blogCarouselNavBtnPrev',
+  },
 
 
 });
@@ -565,9 +568,7 @@ const opacitySwiper = new Swiper('.cardCarousel', {
   slidesPerView: 'auto',
   effect: "cards",
   centeredSlides: true,
-  initialSlide: 1,
-
-
+  initialSlide: 1, 
   breakpoints: {
       768: {
           slidesPerView: 'auto',

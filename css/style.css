@@ -1327,4 +1327,11 @@ ul li {
   .blogCarousel .swiper-slide-active .blog__card {
     max-width: 500px;
   }
+}
+.blogCarouselNavBtnNext:hover circle, .blogCarouselNavBtnPrev:hover circle {
+  stroke: #000000;
+}
+
+.blogCarouselNavBtnNext:hover svg path, .blogCarouselNavBtnPrev:hover svg path {
+  stroke: #000000;
 }/*# sourceMappingURL=style.css.map */

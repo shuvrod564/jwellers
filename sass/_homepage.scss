@@ -934,3 +934,6 @@ margin: auto;display: flex;justify-content: flex-end;  }
       max-width: 500px;
     }
   }
+
+.blogCarouselNavBtnNext:hover circle, .blogCarouselNavBtnPrev:hover circle { stroke: #000000; }
+.blogCarouselNavBtnNext:hover svg path, .blogCarouselNavBtnPrev:hover svg path { stroke: #000000; }
