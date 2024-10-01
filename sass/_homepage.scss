@@ -789,6 +789,11 @@
         &::before, &::after { width: 80%; }
     }
 }
+@media (max-width:575px){
+    .exchange__box {
+        &::before, &::after { width: 70%; }
+    }
+}
 
 @media(max-width:1199px) {
     .exchange__box {
