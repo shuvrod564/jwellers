@@ -534,10 +534,53 @@ var experienceCarousel = new Swiper('.experienceCarousel', {
 
 
 
-var cardCarousel = new Swiper(".cardCarousel", {
+// var cardCarousel = new Swiper(".cardCarousel", {
+//   effect: "cards",
+//       grabCursor: true,
+// });
+const opacitySwiper = new Swiper('.cardCarousel', {
+  // Optional parameters
+  // slidesPerView: 1,
+  // loop: true,
+  loop: true,
+  slidesPerView: 'auto',
   effect: "cards",
-      grabCursor: true,
-});
+  centeredSlides: true,
+  initialSlide: 1,
 
+
+  breakpoints: {
+      768: {
+          slidesPerView: 'auto',
+
+          cardsEffect: {
+              perSlideOffset: 20,
+              slideShadows: false,
+              perSlideRotate: 8, // Rotation of cards in degrees
+          },
+      },
+      0: {
+          spaceBetween: 20,
+          slidesPerView: 1,
+          cardsEffect: {
+              perSlideOffset: 20,
+              slideShadows: false,
+              perSlideRotate: 8, // Rotation of cards in degrees
+          },
+      }
+  },
+  spaceBetween: 0,  
+  // Navigation arrows
+  navigation: {
+      nextEl: '.swiper-button-next.opacitySwiper-n',
+      prevEl: '.swiper-button-prev.opacitySwiper-p',
+  },
+
+  // And if we need scrollbar
+  pagination: {
+      el: '.cardCarouselPagination',
+      clickable: true,
+  },
+});
 
 });
