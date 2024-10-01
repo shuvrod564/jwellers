@@ -790,8 +790,8 @@
 
 .h-320 { height: 323px !important; }
 
-.exchange__box {
-    min-height: 524px;
+.exchange__box .desktop_frame {
+    min-height: 550px;
   
 }
 @media (max-width:991px){

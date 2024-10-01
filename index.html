@@ -2814,73 +2814,74 @@
         <!-- Exchange wrapper start -->
         <div class="py-5" id="gold-exchange">
             <div class="container">
-                <div class="exchange__box p-4 p-md-5 position-relative d-flex align-items-center">
-                    <img src="assets/images/uniqueBorder.png" class="frame img-fluid w-100 h-100 object-fit-contain position-absolute top-0 start-0 end-0 bottom-0 d-none d-lg-block" alt="frame-bg">
-                    <img src="assets/images/uniqueBorderMobile.png" class="frame img-fluid w-100 h-100 object-fit-cover position-absolute top-0 end-0 d-lg-none" alt="frame-bg">
-                   
-                    <div class="row g-4 position-relative z-3">
-                        <div class="col-lg-6 text-center text-lg-start"> 
-                            <img src="assets/images/promise-logo.png" class="img-fluid logo" alt="logo" width="116" height="116"> 
-                            <h2 class="ff-fraunces fw-semibold fs-1" style="color: #300708;"> 
-                                Tanishq Exchange
-                            </h2> 
-                            <p class=" desc" style="color:#300708;">Embrace grace with our timeless jewellery, each piece whispering tales of love, resilience, and enduring bonds</p>
-                            <a href="#" class="btn btn-primary explore__btn ff-fraunces small fw-semibold rounded-pill gap-3 px-4 border-0">
-                                <span>Learn More</span>
-                                <span class="icon d-inline-flex rounded-circle justify-content-center align-items-center">
-                                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8 5L13 10L8 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>                                         
-                                </span>
-                            </a>
-                        </div><!--.col-->
-                        <div class="col-lg-6">
-                            <div class="position-relative rounded-4 overflow-hidden video__box h-auto"> 
-                                <video id="videoEx" width="640" height="360" poster="assets/images/exchange-video-banner.png" class="video h-320">
-                                    <source src="assets/images/video/video.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video> 
-                                <button type="button" id="play-buttonEx" class="btn btn-white position-absolute start-50 translate-middle bottom-auto top-50 rounded-circle overflow-hidden">
-                                    <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/>
-                                    </svg>                             
-                                </button>
-                                <script>
-                                    const videoEx = document.getElementById('videoEx');
-                                    const playbuttonEx = document.getElementById('play-buttonEx');
-    
-                                    // SVG icons for play and pause
-                                    const playIcon4 = `<svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/
-                                    </svg>`;
-                                    const pauseIcon4 = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="#000000" d="M216 48v160a16 16 0 0 1-16 16h-40a16 16 0 0 1-16-16V48a16 16 0 0 1 16-16h40a16 16 0 0 1 16 16M96 32H56a16 16 0 0 0-16 16v160a16 16 0 0 0 16 16h40a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16"/></svg>`;
-    
-                                    // Initially set the play icon
-                                    playbuttonEx.innerHTML = playIcon4;
-    
-                                    playbuttonEx.addEventListener('click', () => {
-                                        if (videoEx.paused) {
-                                            videoEx.play();
-                                            playbuttonEx.innerHTML = pauseIcon4; // Set to pause icon when playing
-                                        } else {
-                                            videoEx.pause();
-                                            playbuttonEx.innerHTML = playIcon4; // Set to play icon when paused
-                                        }
-                                    });
-    
-                                    videoEx.addEventListener('click', () => {
-                                        if (videoEx.paused) {
-                                            videoEx.play();
-                                            playbuttonEx.innerHTML = pauseIcon4; // Set to pause icon when playing
-                                        } else {
-                                            videoEx.pause();
-                                            playbuttonEx.innerHTML = playIcon4; // Set to play icon when paused
-                                        }
-                                    });
-    
-                                    videoEx.addEventListener('ended', () => {
-                                        playbuttonEx.innerHTML = playIcon3; // Reset to play icon when video ends
-                                    }); 
-                                </script>
+                <div class="exchange__box position-relative">
+                    <img src="assets/images/uniqueBorder.png" class="frame img-fluid w-100 h-100 d-none d-lg-block desktop_frame" alt="frame-bg">
+                    <img src="assets/images/uniqueBorderMobile.png" class="frame img-fluid w-100 h-100 d-lg-none" alt="frame-bg">
+                    <div class="position-absolute top-0 start-0 end-0 bottom-0 p-4 p-md-5 d-flex align-items-center"> 
+                        <div class="row g-4 position-relative z-3">
+                            <div class="col-lg-6 text-center text-lg-start"> 
+                                <img src="assets/images/promise-logo.png" class="img-fluid logo" alt="logo" width="116" height="116"> 
+                                <h2 class="ff-fraunces fw-semibold fs-1" style="color: #300708;"> 
+                                    Tanishq Exchange
+                                </h2> 
+                                <p class=" desc" style="color:#300708;">Embrace grace with our timeless jewellery, each piece whispering tales of love, resilience, and enduring bonds</p>
+                                <a href="#" class="btn btn-primary explore__btn ff-fraunces small fw-semibold rounded-pill gap-3 px-4 border-0">
+                                    <span>Learn More</span>
+                                    <span class="icon d-inline-flex rounded-circle justify-content-center align-items-center">
+                                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 5L13 10L8 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>                                         
+                                    </span>
+                                </a>
+                            </div><!--.col-->
+                            <div class="col-lg-6">
+                                <div class="position-relative rounded-4 overflow-hidden video__box h-auto"> 
+                                    <video id="videoEx" width="640" height="360" poster="assets/images/exchange-video-banner.png" class="video h-320">
+                                        <source src="assets/images/video/video.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video> 
+                                    <button type="button" id="play-buttonEx" class="btn btn-white position-absolute start-50 translate-middle bottom-auto top-50 rounded-circle overflow-hidden">
+                                        <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/>
+                                        </svg>                             
+                                    </button>
+                                    <script>
+                                        const videoEx = document.getElementById('videoEx');
+                                        const playbuttonEx = document.getElementById('play-buttonEx');
+        
+                                        // SVG icons for play and pause
+                                        const playIcon4 = `<svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/
+                                        </svg>`;
+                                        const pauseIcon4 = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="#000000" d="M216 48v160a16 16 0 0 1-16 16h-40a16 16 0 0 1-16-16V48a16 16 0 0 1 16-16h40a16 16 0 0 1 16 16M96 32H56a16 16 0 0 0-16 16v160a16 16 0 0 0 16 16h40a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16"/></svg>`;
+        
+                                        // Initially set the play icon
+                                        playbuttonEx.innerHTML = playIcon4;
+        
+                                        playbuttonEx.addEventListener('click', () => {
+                                            if (videoEx.paused) {
+                                                videoEx.play();
+                                                playbuttonEx.innerHTML = pauseIcon4; // Set to pause icon when playing
+                                            } else {
+                                                videoEx.pause();
+                                                playbuttonEx.innerHTML = playIcon4; // Set to play icon when paused
+                                            }
+                                        });
+        
+                                        videoEx.addEventListener('click', () => {
+                                            if (videoEx.paused) {
+                                                videoEx.play();
+                                                playbuttonEx.innerHTML = pauseIcon4; // Set to pause icon when playing
+                                            } else {
+                                                videoEx.pause();
+                                                playbuttonEx.innerHTML = playIcon4; // Set to play icon when paused
+                                            }
+                                        });
+        
+                                        videoEx.addEventListener('ended', () => {
+                                            playbuttonEx.innerHTML = playIcon3; // Reset to play icon when video ends
+                                        }); 
+                                    </script>
+                                </div>
                             </div>
                         </div>
                     </div>
