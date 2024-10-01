@@ -473,35 +473,54 @@ $(function() {
 
 
 
-// Blog slider script
-var blogCarousel = new Swiper('.blogCarousel', {
-  observer: true,  
-  observeParents: true,
+// // Blog slider script
+// var blogCarousel = new Swiper('.blogCarousel', {
+//   observer: true,  
+//   observeParents: true,
+//   loop: true,
+//   speed: 400,
+//   spaceBetween: 20,
+//   slidesPerView: 1, 
+//   observer: true,  
+//   centeredSlides: true,
+//   observeParents: true, 
+//   breakpoints: { 
+//     576: {
+//       slidesPerView: 1,
+//       spaceBetween: 24, 
+//     }, 
+//     992: {
+//       slidesPerView: 2,
+//       spaceBetween: 24
+//     }, 
+//     1200: {
+//       slidesPerView: 2.4,
+//       spaceBetween: 24
+//     }
+//   }, 
+//   pagination: {
+//     el: '.blogCarouselPagination', 
+//   },
+// });
+
+const Articalswiper = new Swiper('.blogCarousel', {
+  // Optional parameters
+
   loop: true,
-  speed: 400,
-  spaceBetween: 20,
-  slidesPerView: 1, 
-  observer: true,  
-  centeredSlides: true,
-  observeParents: true, 
-  breakpoints: { 
-    576: {
-      slidesPerView: 1,
-      spaceBetween: 24, 
-    }, 
-    992: {
-      slidesPerView: 2,
-      spaceBetween: 24
-    }, 
-    1200: {
-      slidesPerView: 2.4,
-      spaceBetween: 24
-    }
-  }, 
-  pagination: {
-    el: '.blogCarouselPagination', 
-  },
+  initialSlide: 1,
+  slidesPerView: 'auto',
+  speed: 1000,
+  //    effect:"fade-out",
+  // autoplay: true,
+  spaceBetween: 60,
+
+  // If we need pagination
+
+ 
+
+
 });
+
 
 // Blog slider script
 var experienceCarousel = new Swiper('.experienceCarousel', {
