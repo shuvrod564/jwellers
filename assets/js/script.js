@@ -569,7 +569,10 @@ const opacitySwiper = new Swiper('.cardCarousel', {
           },
       }
   },
-  spaceBetween: 0,  
+  spaceBetween: 0,
+
+
+
   // Navigation arrows
   navigation: {
       nextEl: '.swiper-button-next.opacitySwiper-n',
@@ -577,7 +580,7 @@ const opacitySwiper = new Swiper('.cardCarousel', {
   },
 
   // And if we need scrollbar
-  pagination: {
+  scrollbar: {
       el: '.cardCarouselPagination',
       clickable: true,
   },
