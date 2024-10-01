@@ -41,10 +41,14 @@ function initSwiper() {
     loop: false,
     speed: 400,
     spaceBetween: 0,
-    slidesPerView: isVertical ? 'auto' : 'auto',
+    slidesPerView: isVertical ? 4 : 4.5,
     direction: isVertical ? 'vertical' : 'horizontal', // Set direction based on screen width
     pagination: {
       el: '.swiper-pagination',
+    },
+    navigation: {
+      nextEl: '.categoryCarouselNavNext',
+      prevEl: '.categoryCarouselNavPrev',
     },
   });
 }
@@ -114,6 +118,11 @@ var productCarousel = new Swiper('.productCarousel', {
       slidesPerView: 3,
       spaceBetween: 36,
       centeredSlides: false
+    },
+    1400: {
+      slidesPerView: 4,
+      spaceBetween: 36,
+      centeredSlides: false
     }
   },
 });
@@ -169,6 +178,10 @@ var galleryCarousel = new Swiper('.galleryCarousel', {
       spaceBetween: 36,
       centeredSlides: false
     }
+  },
+  navigation: {
+    nextEl: '.galleryCarouselNavBtnNext',
+    prevEl: '.galleryCarouselNavBtnPrev',
   },
 });
 

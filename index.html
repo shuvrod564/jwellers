@@ -25,35 +25,48 @@
     
     <main>
         <!-- Header slider wrapper start -->
-        <div class="container px-0 position-relative">
+        <div class="container-fluid px-0 position-relative">
             <div class="discount__tag p-3  top-0 start-0 w-100 fw-bold text-center small">
                 <span class="position-relative z-1">Upto <span class="num text-primary fs-6">20%</span> off on diamond jewellery value</span>
             </div>
             <div class="swiper-container heroBannerCarousel w-100">
                 <div class="swiper-wrapper">
-                    <div data-hash="slide1" class="swiper-slide"> 
+                    <div data-hash="slide1" class="swiper-slide d-none d-sm-block"> 
                         <img 
                             src="assets/images/slider-banner-01.jpg" 
                             alt="banner" class="img-fluid w-100 object-fit-cover"
                         >
                     </div>   
-                    <div data-hash="slide2" class="swiper-slide"> 
+                    <div data-hash="slide2" class="swiper-slide d-none d-sm-block"> 
                         <img 
                         src="assets/images/slider-banner-01.jpg" 
                         alt="banner" class="img-fluid w-100 object-fit-cover"
                     >
                     </div> 
-                    <div data-hash="slide3" class="swiper-slide"> 
+                    <div data-hash="slide3" class="swiper-slide d-none d-sm-block"> 
                         <img 
                             src="assets/images/slider-banner-01.jpg" 
                             alt="banner" class="img-fluid w-100 object-fit-cover"
                         >
                     </div> 
+                    <!-- mobile banner -->
+                    <div data-hash="slide3" class="swiper-slide d-sm-none"> 
+                        <img 
+                            src="assets/images/mobile-banner.png" 
+                            alt="banner" class="img-fluid w-100 object-fit-cover"
+                        >
+                    </div> 
+                    <div data-hash="slide3" class="swiper-slide d-sm-none"> 
+                        <img 
+                            src="assets/images/mobile-banner.png" 
+                            alt="banner" class="img-fluid w-100 object-fit-cover"
+                        >
+                    </div> 
                 </div><!--./wrapper--> 
-                <div class="swiper-pagination heroBannerCarouselPagination"></div> 
+                <div class="swiper-pagination heroBannerCarouselPagination d-lg-none mt-3"></div> 
             </div><!--./carousel-->
 
-            <div class="position-absolute start-50 translate-middle-x pagination__box rounded-pill px-4 py-3 d-inline-flex align-items-center">
+            <div class="position-absolute start-50 translate-middle-x pagination__box rounded-pill px-4 py-3 d-none d-md-inline-flex align-items-center">
                 <a href="#explore-categories">Explore Categories</a>
                 <a href="#collections">Collections</a>
                 <a href="#occasions">Occasions</a>
@@ -62,6 +75,31 @@
             </div>
         </div><!--.container--> 
         <!-- Header slider wrapper end -->
+
+        <!-- Fixed Collection Button Start -->
+        <div class="position-fixed fixed__collection__box">
+            <div class="dropdown">
+                <button class="btn btn-primary rounded-pill py-3 px-4 small fw-medium border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Collections
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item fw-bold jump" href="#">
+                            <span>Jump to</span>
+                            <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.06092 9.2931L11.332 4.99977L7.06092 0.706432C7.02235 0.655777 6.97334 0.614001 6.91722 0.583933C6.86109 0.553865 6.79917 0.536206 6.73563 0.532152C6.67208 0.528098 6.60842 0.537743 6.54893 0.560435C6.48944 0.583127 6.43552 0.618336 6.39082 0.663677C6.34612 0.709019 6.31169 0.763435 6.28985 0.823242C6.26801 0.883049 6.25927 0.94685 6.26423 1.01033C6.26919 1.0738 6.28774 1.13547 6.3186 1.19116C6.34947 1.24685 6.39194 1.29525 6.44314 1.3331L9.6387 4.55532L1.13648 4.55532C1.0186 4.55532 0.905556 4.60215 0.822206 4.68549C0.738856 4.76884 0.692031 4.88189 0.692031 4.99976C0.692031 5.11764 0.738856 5.23069 0.822206 5.31403C0.905556 5.39738 1.0186 5.44421 1.13648 5.44421L9.6387 5.44421L6.44314 8.66643C6.36004 8.75012 6.31359 8.8634 6.31401 8.98134C6.31442 9.09928 6.36167 9.21222 6.44536 9.29532C6.52905 9.37842 6.64233 9.42487 6.76027 9.42446C6.87821 9.42404 6.99115 9.37679 7.07425 9.2931L7.06092 9.2931Z" fill="#4A0709"/>
+                            </svg>                             
+                        </a>
+                    </li>
+                    <li><a class="dropdown-item" href="#collections">Collections</a></li>
+                    <li><a class="dropdown-item" href="#occasions">Occasions</a></li>
+                    <li><a class="dropdown-item active" href="#explore-categories">Explore Categories</a></li>
+                    <li><a class="dropdown-item" href="#craftsmanship">Craftsmanship</a></li>
+                    <li><a class="dropdown-item" href="#gold-exchange">Gold exchange</a></li> 
+                </ul>
+            </div>
+        </div>
+        <!-- Fixed Collection Button End -->
 
         <!-- Category wrapper start -->
         <div class="py-5 position-relative" id="explore-categories"> 
@@ -76,7 +114,7 @@
 
                 <div class="d-flex flex-wrap align-items-start">
                     <div class="category__col d-flex overflow-hidden"> 
-                        <div class="category__list__box w-100"> 
+                        <div class="category__list__box w-100 text-center h-auto"> 
                             <div class="swiper-container categoryCarousel w-100">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide"> 
@@ -127,11 +165,37 @@
                                             <small class="mb-0 fw-medium">320 items</small>
                                         </div>
                                     </div> 
+                                    <div class="swiper-slide"> 
+                                        <div class="category__item mb-4 text-center"> 
+                                            <figure class="icon__box mx-auto rounded-circle d-flex align-items-center justify-content-center overflow-hidden mb-2"> 
+                                                <img 
+                                                    src="assets/images/categories/bracelets.png" 
+                                                    alt="Necklaces" class="img-fluid object-fit-contain"
+                                                >
+                                            </figure>
+                                            <h3 class="title fs-6 ff-fraunces fw-semibold mb-1">Bracelets</h3>
+                                            <small class="mb-0 fw-medium">320 items</small>
+                                        </div>
+                                    </div> 
                                   
                                     
                                 </div><!--./wrapper--> 
-                               
                             </div><!--./carousel-->
+                            <button class="btn categoryCarouselNavNext position-relative p-0 border-0 d-none d-lg-inline-flex" style="z-index: 99;">
+                                <svg width="44" height="45" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="22" cy="22" r="21.5" transform="matrix(0 -1 -1 0 44 44.0156)" stroke="#CFCEC8"/>
+                                    <g clip-path="url(#clip0_109_1323)">
+                                    <path d="M27.5 23.1759C25.0191 24.2464 23.8804 25.613 22.0026 28.8906" stroke="#631517" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22.002 15.8281L22.002 28.8904" stroke="#631517" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16.5 23.1704C18.9809 24.2409 20.1196 25.6075 21.9974 28.8851" stroke="#631517" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_109_1323">
+                                    <rect width="13.75" height="13.75" fill="white" transform="matrix(0 1 -1 0 28.875 15.1406)"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>                                         
+                            </button>
                         </div>
                     </div>
                     
@@ -880,126 +944,7 @@
 
             </div><!--.container-->
         </div>
-        <!-- Category wrapper end -->
-
-        <!-- Info wrapper start -->
-        <div class="py-5 d-none d-lg-block">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-lg-4">
-                        <div class="card info__card">
-                            <div class="card-body">
-                                <h2 class="fs-1 ff-fraunces text-dark fw-normal spacing-narrow">Beautiful Hands - An Initiative by Tanishq</h2>
-                                <p class="lead-sm">Kundan jewelry, an ancient Indian craft, features pure gold and gemstones inlaid with precision. Rooted in royal heritage, each piece tells a story of love and legacy, making it a timeless treasure.</p>
-
-                                <a href="#" class="btn btn-primary explore__btn ff-fraunces small fw-semibold rounded-pill gap-3 px-4 py-3 border-0">
-                                    <span>Learn More</span>
-                                    <span class="icon d-inline-flex rounded-circle justify-content-center align-items-center">
-                                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8 5L13 10L8 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>                                         
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card highligt__card p-4">
-                            <div class="position-relative product d-flex justify-content-center align-items-center">
-                                <img src="assets/images/highlight-ring.png" class="img-fluid" alt="ring">
-                                <div class="position-absolute pointer">
-                                    <span class="icon d-flex justify-content-center align-items-center"></span>
-                                    <span class="tag position-absolute start-0 px-3 py-3 text-dark ff-fraunces fw-normal bg-white text-nowrap">Casual wear</span>
-                                </div>
-                                <div class="position-absolute pointer second">
-                                    <span class="icon d-flex justify-content-center align-items-center"></span>
-                                    <span class="tag position-absolute start-0 px-3 py-3 text-dark ff-fraunces fw-normal bg-white text-nowrap">22k Gold</span>
-                                </div>
-                            </div>
-                            <div class="bg-white rounded-4 caption p-3 mt-5">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="col">
-                                        <h4 class="ff-fraunces fs-6 fw-normal text-dark lh-sm mb-0">
-                                            <a href="#">Statement Gold Finger Ring</a>
-                                        </h4>
-                                        <div class="d-flex align-items-center">
-                                            <span class="fs-5 ff-fraunces font-normal text-dark">35,000/-</span>
-                                            <small class="text-primary">20% off</small>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="btn p-0 btn__arrow rounded-circle">
-                                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_16_760)">
-                                            <path d="M8.16028 1.63965C9.23081 4.12054 10.5974 5.25929 13.875 7.13701" stroke="#490A0C" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M0.8125 7.1377L13.8747 7.1377" stroke="#490A0C" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            <path d="M8.15479 12.6396C9.22532 10.1588 10.5919 9.02001 13.8695 7.14229" stroke="#490A0C" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_16_760">
-                                            <rect width="13.75" height="13.75" fill="white" transform="translate(0.125 0.264648)"></rect>
-                                            </clipPath>
-                                            </defs>
-                                        </svg>                                                     
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="position-relative rounded-4 overflow-hidden video__box"> 
-                            <video id="video2" width="640" height="360" poster="assets/images/portrait-video-banner.png" class="video">
-                                <source src="assets/images/video/video.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video> 
-                            <button type="button" id="play-button2" class="btn btn-white position-absolute start-50 translate-middle bottom-auto top-50 rounded-circle overflow-hidden">
-                                <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/>
-                                </svg>                             
-                            </button>
-                            <script>
-                                const video2 = document.getElementById('video2');
-                                const playButton2 = document.getElementById('play-button2');
-
-                                // SVG icons for play and pause
-                                const playIcon2 = `<svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/
-                                </svg>`;
-                                const pauseIcon2 = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="#000000" d="M216 48v160a16 16 0 0 1-16 16h-40a16 16 0 0 1-16-16V48a16 16 0 0 1 16-16h40a16 16 0 0 1 16 16M96 32H56a16 16 0 0 0-16 16v160a16 16 0 0 0 16 16h40a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16"/></svg>`;
-
-                                // Initially set the play icon
-                                playButton2.innerHTML = playIcon2;
-
-                                playButton2.addEventListener('click', () => {
-                                    if (video2.paused) {
-                                        video2.play();
-                                        playButton2.innerHTML = pauseIcon2; // Set to pause icon when playing
-                                    } else {
-                                        video2.pause();
-                                        playButton2.innerHTML = playIcon2; // Set to play icon when paused
-                                    }
-                                });
-
-                                video2.addEventListener('click', () => {
-                                    if (video2.paused) {
-                                        video2.play();
-                                        playButton2.innerHTML = pauseIcon2; // Set to pause icon when playing
-                                    } else {
-                                        video2.pause();
-                                        playButton2.innerHTML = playIcon2; // Set to play icon when paused
-                                    }
-                                });
-
-                                video2.addEventListener('ended', () => {
-                                    playButton2.innerHTML = playIcon2; // Reset to play icon when video ends
-                                });
-
-                            </script>
-                        </div>
-                    </div>
-                </div><!--.row-->
-            </div><!--.container-->
-        </div>
-        <!-- Info wrapper end -->
+        <!-- Category wrapper end --> 
         
         <!-- Video wrapper start -->
         <div class="py-5" id="collections">
@@ -1011,7 +956,7 @@
                             Your browser does not support the video tag.
                         </video>
                     
-                        <button type="button" id="play-button" class="btn btn-white position-absolute start-50 translate-middle-x rounded-circle overflow-hidden">
+                        <button type="button" id="play-button" class="btn btn-white position-absolute start-50 top-50 translate-middle rounded-circle overflow-hidden">
                             <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/>
                             </svg>                             
@@ -1065,7 +1010,7 @@
                                             <span class="display-3 ff-fraunces fw-semibold gradient__title">Nav-raani</span>
                                             <span class="gradient__title">Collection</span>
                                         </h2>
-                                        <p style="color:#685442;">
+                                        <p class="mb-0" style="color:#685442;">
                                             At Tanishq, jewelry is more than adornment; it's a connection to tradition and India's rich cultural legacy. Each piece carries timeless elegance and the enduring spirit of our heritage.
                                         </p>
     
@@ -1084,9 +1029,9 @@
                             </div>
     
                             
-                            <div class="swiper-container productCarousel mt-5">
+                            <div class="swiper-container productCarousel mt-3">
                                 <div class="swiper-wrapper">
-                                    <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div data-hash="slide1" class="swiper-slide pt-3 pb-md-5"> 
                                         <div class="collection__card"> 
                                             <a href="#" class="d-block">
                                                 <img 
@@ -1105,7 +1050,7 @@
                                             </div>
                                         </div>
                                     </div>   
-                                    <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div data-hash="slide1" class="swiper-slide pt-3 pb-md-5"> 
                                         <div class="collection__card active"> 
                                             <a href="#" class="d-block"> 
                                                 <img 
@@ -1124,7 +1069,7 @@
                                             </div>
                                         </div>
                                     </div>   
-                                    <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div data-hash="slide1" class="swiper-slide pt-3 pb-md-5"> 
                                         <div class="collection__card"> 
                                             <a href="#" class="d-block"> 
                                                 <img 
@@ -1143,7 +1088,7 @@
                                             </div>
                                         </div>
                                     </div>   
-                                    <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div data-hash="slide1" class="swiper-slide pt-3 pb-md-5"> 
                                         <div class="collection__card"> 
                                             <a href="#" class="d-block">
                                                 <img 
@@ -1177,8 +1122,131 @@
          </div>
         <!-- Video wrapper end --> 
 
+        <!-- Info wrapper start -->
+        <div class="pb-5 pt-md-5">
+            <div class="container">
+                <div class="row g-0 g-lg-4">
+                    <div class="col-lg-4 order-lg-1">
+                        <div class="card info__card">
+                            <div class="card-body">
+                                <img src="assets/images/icons/divider-top.svg" class="img-fluid d-lg-none mb-3" alt="divider" width="116" height="30">
+                                <h2 class="fs-1 ff-fraunces text-dark fw-normal spacing-narrow">Beautiful Hands - An Initiative by Tanishq</h2>
+                                <p class="lead-sm">Kundan jewelry, an ancient Indian craft, features pure gold and gemstones inlaid with precision. Rooted in royal heritage, each piece tells a story of love and legacy, making it a timeless treasure.</p>
+
+                                <img src="assets/images/icons/divider-bottom.svg" class="img-fluid d-lg-none" alt="divider" width="116" height="30">
+
+                                <a href="#" class="btn btn-primary explore__btn ff-fraunces small fw-semibold rounded-pill gap-3 px-4 py-3 border-0 d-none d-lg-inline-flex">
+                                    <span>Learn More</span>
+                                    <span class="icon d-inline-flex rounded-circle justify-content-center align-items-center">
+                                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 5L13 10L8 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                         
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 order-lg-3"> 
+                        <div class="position-relative rounded-4 overflow-hidden video__box have__radius"> 
+                            <video id="video2" width="640" height="360" poster="assets/images/portrait-video-banner.png" class="video">
+                                <source src="assets/images/video/video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video> 
+                            <button type="button" id="play-button2" class="btn btn-white position-absolute start-50 translate-middle bottom-auto top-50 rounded-circle overflow-hidden">
+                                <svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/>
+                                </svg>                             
+                            </button>
+                        </div>
+                            <script>
+                                const video2 = document.getElementById('video2');
+                                const playButton2 = document.getElementById('play-button2');
+
+                                // SVG icons for play and pause
+                                const playIcon2 = `<svg width="23" height="26" viewBox="0 0 23 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4698 9.53605C23.1365 11.0757 23.1365 14.9247 20.4698 16.4643L6.26503 24.6654C3.59836 26.205 0.265029 24.2805 0.265029 21.2013L0.26503 4.79899C0.26503 1.71979 3.59836 -0.204707 6.26503 1.33489L20.4698 9.53605Z" fill="white"/
+                                </svg>`;
+                                const pauseIcon2 = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="#000000" d="M216 48v160a16 16 0 0 1-16 16h-40a16 16 0 0 1-16-16V48a16 16 0 0 1 16-16h40a16 16 0 0 1 16 16M96 32H56a16 16 0 0 0-16 16v160a16 16 0 0 0 16 16h40a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16"/></svg>`;
+
+                                // Initially set the play icon
+                                playButton2.innerHTML = playIcon2;
+
+                                playButton2.addEventListener('click', () => {
+                                    if (video2.paused) {
+                                        video2.play();
+                                        playButton2.innerHTML = pauseIcon2; // Set to pause icon when playing
+                                    } else {
+                                        video2.pause();
+                                        playButton2.innerHTML = playIcon2; // Set to play icon when paused
+                                    }
+                                });
+
+                                video2.addEventListener('click', () => {
+                                    if (video2.paused) {
+                                        video2.play();
+                                        playButton2.innerHTML = pauseIcon2; // Set to pause icon when playing
+                                    } else {
+                                        video2.pause();
+                                        playButton2.innerHTML = playIcon2; // Set to play icon when paused
+                                    }
+                                });
+
+                                video2.addEventListener('ended', () => {
+                                    playButton2.innerHTML = playIcon2; // Reset to play icon when video ends
+                                });
+
+                            </script>
+                    </div>
+                    <div class="col-lg-4 order-lg-2">
+                        <div class="card highligt__card p-4">
+                            <div class="position-relative product d-flex justify-content-center align-items-center">
+                                <img src="assets/images/highlight-ring.png" class="img-fluid" alt="ring">
+                                <div class="position-absolute pointer">
+                                    <span class="icon d-flex justify-content-center align-items-center"></span>
+                                    <span class="tag position-absolute start-0 px-3 py-3 text-dark ff-fraunces fw-normal bg-white text-nowrap">Casual wear</span>
+                                </div>
+                                <div class="position-absolute pointer second">
+                                    <span class="icon d-flex justify-content-center align-items-center"></span>
+                                    <span class="tag position-absolute start-0 px-3 py-3 text-dark ff-fraunces fw-normal bg-white text-nowrap">22k Gold</span>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-4 caption p-3 mt-5">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="col">
+                                        <h4 class="ff-fraunces fs-6 fw-normal text-dark lh-sm mb-0">
+                                            <a href="#">Statement Gold Finger Ring</a>
+                                        </h4>
+                                        <div class="d-flex align-items-center">
+                                            <span class="fs-5 ff-fraunces font-normal text-dark">35,000/-</span>
+                                            <small class="text-primary">20% off</small>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn p-0 btn__arrow rounded-circle">
+                                        <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_16_760)">
+                                            <path d="M8.16028 1.63965C9.23081 4.12054 10.5974 5.25929 13.875 7.13701" stroke="#490A0C" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M0.8125 7.1377L13.8747 7.1377" stroke="#490A0C" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M8.15479 12.6396C9.22532 10.1588 10.5919 9.02001 13.8695 7.14229" stroke="#490A0C" stroke-width="0.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_16_760">
+                                            <rect width="13.75" height="13.75" fill="white" transform="translate(0.125 0.264648)"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>                                                     
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div><!--.row-->
+            </div><!--.container-->
+        </div>
+        <!-- Info wrapper end -->
+
         <!-- Story wrapper start -->
-        <div class="pb-5 pt-lg-0">
+        <div class="pb-5 pt-md-5">
             <div class="container">
                 <div class="slider__container">
                     <div class="swiper-container galleryCarousel w-100">
@@ -1203,6 +1271,36 @@
                             </div> 
                         </div><!--./wrapper--> 
                         <div class="swiper-pagination galleryCarouselPagination"></div> 
+                        <button class="btn border-0 controlBtn p-0 galleryCarouselNavBtnPrev position-absolute z-3 d-none d-md-inline-block">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="31.5" transform="matrix(-1 0 0 1 64 0)" stroke="#D9BDBE"/>
+                            <g clip-path="url(#clip0_42_1628)">
+                            <path d="M30.3125 40C28.7554 36.3914 26.7676 34.7351 22.0002 32.0038" stroke="#D9D9D9" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M41 32.0029L22.0004 32.0029" stroke="#D9D9D9" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M30.3203 24C28.7632 27.6086 26.7754 29.2649 22.008 31.9962" stroke="#D9D9D9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_42_1628">
+                            <rect width="20" height="20" fill="white" transform="translate(42 42) rotate(-180)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                        </button>
+                        <button class="btn border-0 controlBtn p-0 galleryCarouselNavBtnNext position-absolute z-3 d-none d-md-inline-block">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="32" cy="32" r="31.5" transform="matrix(-1 0 0 1 64 0)" stroke="#D9BDBE"/>
+                                <g clip-path="url(#clip0_42_1629)">
+                                <path d="M33.6875 24C35.2446 27.6086 37.2324 29.2649 41.9998 31.9962" stroke="#D9D9D9" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M23 31.9971L41.9996 31.9971" stroke="#D9D9D9" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M33.6797 40C35.2368 36.3914 37.2246 34.7351 41.992 32.0038" stroke="#D9D9D9" stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_42_1629">
+                                <rect width="20" height="20" fill="white" transform="translate(22 22)"/>
+                                </clipPath>
+                                </defs>
+                            </svg>                             
+                        </button>
                     </div><!--./carousel-->
                 </div><!--.slider__container-->
  
@@ -1220,7 +1318,7 @@
                         <img src="assets/images/icons/divider-bottom.svg" class="img-fluid d-lg-none" alt="divider" width="116" height="30">
 
 
-                        <a href="#" class="btn btn-primary explore__btn outline ff-fraunces small fw-semibold rounded-pill gap-3 px-4 border-0 d-none d-inline-flex">
+                        <a href="#" class="btn btn-primary explore__btn outline ff-fraunces small fw-semibold rounded-pill gap-3 px-4 border-0 d-none d-lg-inline-flex">
                             <img src="assets/images/icons/divider-top.svg" class="img-fluid d-lg-none" alt="divider" width="116" height="30">
                             <span>Visit Collection</span>
                             <span class="icon d-inline-flex rounded-circle justify-content-center align-items-center">
@@ -1235,7 +1333,7 @@
                         <div class="mobile__full__width"> 
                             <div class="swiper-container productThreeItemCarousel">
                                 <div class="swiper-wrapper">
-                                    <div data-hash="slide1" class="swiper-slide pt-3 pb-5"> 
+                                    <div data-hash="slide1" class="swiper-slide pt-3 pb-md-5"> 
                                         <div class="collection__card"> 
                                             <a href="#" class="d-block thumbnail">
                                                 <img 
@@ -1334,8 +1432,8 @@
         <!-- Story wrapper end -->
 
         <!-- Gold Collection Wrapper start -->
-        <div class="pb-5 pt-3 text-center" id="occasions">
-            <div class="container"> 
+        <div class="pb-5 pt-3 pt-md-5 text-center" id="occasions">
+            <div class="container pb-md-4"> 
                 <img src="assets/images/icons/divider-top.svg" class="img-fluid mb-3" alt="divider" width="116" height="30">
                 <p class="text-uppercase mb-1">Featured Collection</p>
                 <h2 class="ff-fraunces fw-semibold fs-1 gradient__title"> 
@@ -1346,7 +1444,7 @@
                 </p> 
                 <img src="assets/images/icons/divider-bottom.svg" class="img-fluid" alt="divider" width="116" height="30">
 
-                <div class="row g-4 d-none d-md-flex">
+                <div class="row g-4 d-none d-md-flex align-items-center">
                     <div class="col-lg-6">
                         <div class="collection__card__new" style="background-image: url('assets/images/card-bg.png')">  
                             <a href="#" class="d-block mb-4"> 
@@ -1399,7 +1497,7 @@
                 </div><!--.row-->
 
                 <!-- Mobile Slider -->
-                <div class="d-md-none">
+                <div class="d-md-none mt-3">
                     <div class="swiper-container cardCarousel">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"> 
@@ -1423,18 +1521,18 @@
         <!-- Gold Collection Wrapper end -->
 
         <!-- Tab products wrapper start -->
-        <div class="py-4">
-            <div class="container">
+        <div class="py-5">
+            <div class="container pt-md-5">
                 <div class="d-flex justify-content-between">
                     <ul class="nav nav-pills custom__nav filter d-inline-flex border gap-lg-3 rounded-pill p-1 m-0" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative active" id="pills-trendingNew-tab" data-bs-toggle="pill" data-bs-target="#pills-trendingNew" type="button" role="tab" aria-controls="pills-trendingNew" aria-selected="true">Trending now</button>
+                          <a href="javascript:void(0)" class="nav-link px-3 px-sm-4 py-3 text-center rounded-pill position-relative active" id="pills-trendingNew-tab" data-bs-toggle="pill" data-bs-target="#pills-trendingNew" type="button" role="tab" aria-controls="pills-trendingNew" aria-selected="true">Trending now</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative" id="pills-topSeller-tab" data-bs-toggle="pill" data-bs-target="#pills-topSeller" type="button" role="tab" aria-controls="pills-topSeller" aria-selected="false">Top-sellers</button>
+                          <a href="javascript:void(0)" class="nav-link px-3 px-sm-4 py-3 text-center rounded-pill position-relative" id="pills-topSeller-tab" data-bs-toggle="pill" data-bs-target="#pills-topSeller" type="button" role="tab" aria-controls="pills-topSeller" aria-selected="false">Top-sellers</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative" id="pills-tryIt-tab" data-bs-toggle="pill" data-bs-target="#pills-tryIt" type="button" role="tab" aria-controls="pills-tryIt" aria-selected="false">Try It On <span class="tag position-absolute start-50 translate-middle-x text-white fw-semibold">New</span></button>
+                          <a href="javascript:void(0)" class="nav-link px-3 px-sm-4 py-3 text-center rounded-pill position-relative" id="pills-tryIt-tab" data-bs-toggle="pill" data-bs-target="#pills-tryIt" type="button" role="tab" aria-controls="pills-tryIt" aria-selected="false">Try It On <span class="tag position-absolute start-50 translate-middle-x text-white fw-semibold">New</span></a>
                         </li> 
                     </ul>
                     <div class="d-none d-md-inline-flex align-items-center gap-3"> 
@@ -1571,7 +1669,7 @@
                                     </div>
                                 </div>    
                             </div><!--./wrapper-->  
-                            <div class="swiper-pagination productCarousel2Pagination text-start mt-3"></div> 
+                            <div class="swiper-pagination productCarousel2Pagination text-center d-lg-none mt-3"></div> 
                         </div><!--./carousel-->
                     </div><!--trendingNew-->
 
@@ -1677,7 +1775,7 @@
                                 </div>   
                                  
                             </div><!--./wrapper--> 
-                            <div class="swiper-pagination productCarousel3Pagination text-start mt-3"></div>  
+                            <div class="swiper-pagination productCarousel3Pagination text-center d-lg-none mt-3"></div>  
                         </div><!--./carousel-->
                     </div><!---->
                     <div class="tab-pane fade" id="pills-tryIt" role="tabpanel" aria-labelledby="pills-tryIt-tab" tabindex="0">
@@ -1781,7 +1879,7 @@
                                 </div>   
                                  
                             </div><!--./wrapper-->  
-                            <div class="swiper-pagination productCarousel4Pagination text-start mt-3"></div> 
+                            <div class="swiper-pagination productCarousel4Pagination text-center d-lg-none mt-3"></div> 
                         </div><!--./carousel-->
                     </div><!--tryIt--> 
                 </div><!--.tab-content-->
@@ -1790,7 +1888,7 @@
         <!-- Tab products wrapper end -->
 
         <!-- Story wrapper start -->
-        <div class="py-5" id="craftsmanship">
+        <div class="pb-5 pt-3 pt-md-5" id="craftsmanship">
             <div class="container">
                 <div class="position-relative">
                     <div class="swiper-container creationCarousel w-100">
@@ -1808,7 +1906,7 @@
                                         <img src="assets/images/icons/divider-bottom.svg" class="img-fluid" alt="divider" width="116" height="30">
                 
                 
-                                        <a href="#" class="btn btn-primary explore__btn outline ff-fraunces small fw-semibold rounded-pill gap-3 px-4 border-0 d-none d-inline-flex">
+                                        <a href="#" class="btn btn-primary explore__btn outline ff-fraunces small fw-semibold rounded-pill gap-3 px-4 border-0 d-none d-lg-inline-flex">
                                             <img src="assets/images/icons/divider-top.svg" class="img-fluid d-lg-none" alt="divider" width="116" height="30">
                                             <span>Visit Collection</span>
                                             <span class="icon d-inline-flex rounded-circle justify-content-center align-items-center">
@@ -1963,7 +2061,7 @@
                                         <img src="assets/images/icons/divider-bottom.svg" class="img-fluid" alt="divider" width="116" height="30">
                 
                 
-                                        <a href="#" class="btn btn-primary explore__btn outline ff-fraunces small fw-semibold rounded-pill gap-3 px-4 border-0 d-none d-inline-flex">
+                                        <a href="#" class="btn btn-primary explore__btn outline ff-fraunces small fw-semibold rounded-pill gap-3 px-4 border-0 d-none d-lg-inline-flex">
                                             <img src="assets/images/icons/divider-top.svg" class="img-fluid d-lg-none" alt="divider" width="116" height="30">
                                             <span>Visit Collection</span>
                                             <span class="icon d-inline-flex rounded-circle justify-content-center align-items-center">
@@ -2087,7 +2185,7 @@
         <!-- Story wrapper end -->
 
         <!-- Contact wrapper start -->
-        <div class="py-5">
+        <div class="pb-5 pt-md-5">
             <div class="container">
                 <div class="card p-4 contact__card d-lg-none d-block rounded-4">
                     <h2 class="fs-2 fw-normal text-dark ff-fraunces col">
@@ -2310,16 +2408,16 @@
                 <div class="d-flex justify-content-center mt-4">
                     <ul class="nav nav-pills custom__nav d-inline-flex border gap-lg-3 rounded-pill p-1 m-0" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative active" id="pills-occasionTab-tab" data-bs-toggle="pill" data-bs-target="#pills-occasionTab" type="button" role="tab" aria-controls="pills-occasionTab" aria-selected="true"><span class="d-none d-md-inline">Explore by</span> Occasion</button>
+                          <a href="javascript:void(0)" class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative active" id="pills-occasionTab-tab" data-bs-toggle="pill" data-bs-target="#pills-occasionTab" type="button" role="tab" aria-controls="pills-occasionTab" aria-selected="true"><span class="d-none d-md-inline">Explore by</span> Occasion</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative" id="pills-budgetTab-tab" data-bs-toggle="pill" data-bs-target="#pills-budgetTab" type="button" role="tab" aria-controls="pills-budgetTab" aria-selected="false"><span class="d-none d-md-inline">Explore by</span> Budget</button>
+                          <a href="javascript:void(0)" class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative" id="pills-budgetTab-tab" data-bs-toggle="pill" data-bs-target="#pills-budgetTab" type="button" role="tab" aria-controls="pills-budgetTab" aria-selected="false"><span class="d-none d-md-inline">Explore by</span> Budget</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative" id="pills-giftTab-tab" data-bs-toggle="pill" data-bs-target="#pills-giftTab" type="button" role="tab" aria-controls="pills-giftTab" aria-selected="false">Gift Cards</button>
+                          <a href="javascript:void(0)" class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative" id="pills-giftTab-tab" data-bs-toggle="pill" data-bs-target="#pills-giftTab" type="button" role="tab" aria-controls="pills-giftTab" aria-selected="false">Gift Cards</a>
                         </li> 
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative" id="pills-goldCoinTab-tab" data-bs-toggle="pill" data-bs-target="#pills-goldCoinTab" type="button" role="tab" aria-controls="pills-goldCoinTab" aria-selected="false">Gold Coins</button>
+                          <a href="javascript:void(0)" class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative" id="pills-goldCoinTab-tab" data-bs-toggle="pill" data-bs-target="#pills-goldCoinTab" type="button" role="tab" aria-controls="pills-goldCoinTab" aria-selected="false">Gold Coins</a>
                         </li> 
                     </ul> 
                 </div>
@@ -2598,7 +2696,7 @@
                 </div>
                 <div class="row g-4 gx-lg-5">
                     <div class="col-lg-7">
-                        <div class="px-5"> 
+                        <div class="pe-lg-5"> 
                             <div class="slider-container">
                                 <button class="btn p-0 arrow-left"> 
                                     <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2705,9 +2803,10 @@
         <!-- Exchange wrapper start -->
         <div class="py-5" id="gold-exchange">
             <div class="container">
-                <div class="exchange__box p-lg-5 position-relative mx-auto" style="max-width: 1050px;">
-                    <img src="assets/images/exchange-frame-bg.svg" class="frame d-none d-md-inline-block img-fluid w-100 h-100 object-fit-contain position-absolute top-0 start-0" alt="frame-bg">
-                    <img src="assets/images/exchange-frame-bg-mobile.svg" class="d-md-none img-fluid w-100 h-100 object-fit-contain position-absolute top-0 start-0" alt="frame-bg">
+                <div class="exchange__box p-5 position-relative">
+                    <img src="assets/images/exchange-frame-bg-left.png" class="frame img-fluid w-auto h-100 object-fit-contain position-absolute top-0 start-0" alt="frame-bg">
+                    <img src="assets/images/exchange-frame-bg-right.png" class="frame img-fluid w-auto h-100 object-fit-contain position-absolute top-0 end-0" alt="frame-bg">
+                   
                     <div class="row g-4 position-relative z-3">
                         <div class="col-xl-6 text-center text-xl-start"> 
                             <img src="assets/images/promise-logo.png" class="img-fluid logo" alt="logo" width="116" height="116"> 
@@ -3028,30 +3127,7 @@
 
     </main>
 
-    <!-- Fixed Collection Button Start -->
-    <div class="position-fixed fixed__collection__box">
-        <div class="dropdown">
-            <button class="btn btn-primary rounded-pill py-3 px-4 small fw-medium border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Collections
-            </button>
-            <ul class="dropdown-menu">
-                <li>
-                    <a class="dropdown-item fw-bold jump" href="#">
-                        <span>Jump to</span>
-                        <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.06092 9.2931L11.332 4.99977L7.06092 0.706432C7.02235 0.655777 6.97334 0.614001 6.91722 0.583933C6.86109 0.553865 6.79917 0.536206 6.73563 0.532152C6.67208 0.528098 6.60842 0.537743 6.54893 0.560435C6.48944 0.583127 6.43552 0.618336 6.39082 0.663677C6.34612 0.709019 6.31169 0.763435 6.28985 0.823242C6.26801 0.883049 6.25927 0.94685 6.26423 1.01033C6.26919 1.0738 6.28774 1.13547 6.3186 1.19116C6.34947 1.24685 6.39194 1.29525 6.44314 1.3331L9.6387 4.55532L1.13648 4.55532C1.0186 4.55532 0.905556 4.60215 0.822206 4.68549C0.738856 4.76884 0.692031 4.88189 0.692031 4.99976C0.692031 5.11764 0.738856 5.23069 0.822206 5.31403C0.905556 5.39738 1.0186 5.44421 1.13648 5.44421L9.6387 5.44421L6.44314 8.66643C6.36004 8.75012 6.31359 8.8634 6.31401 8.98134C6.31442 9.09928 6.36167 9.21222 6.44536 9.29532C6.52905 9.37842 6.64233 9.42487 6.76027 9.42446C6.87821 9.42404 6.99115 9.37679 7.07425 9.2931L7.06092 9.2931Z" fill="#4A0709"/>
-                        </svg>                             
-                    </a>
-                </li>
-                <li><a class="dropdown-item" href="#">Collections</a></li>
-                <li><a class="dropdown-item" href="#">Occasions</a></li>
-                <li><a class="dropdown-item active" href="#">Explore Categories</a></li>
-                <li><a class="dropdown-item" href="#">Craftsmanship</a></li>
-                <li><a class="dropdown-item" href="#">Gold exchange</a></li> 
-            </ul>
-        </div>
-    </div>
-    <!-- Fixed Collection Button End -->
+    
 
  
    

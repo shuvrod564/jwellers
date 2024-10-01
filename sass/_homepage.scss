@@ -21,8 +21,10 @@
 
 .swiper-pagination  {
     position: static !important;
+    margin-top: 1rem;
 
     .swiper-pagination-bullet { 
+        margin: 6px !important;
         border-radius: 0%;transform: rotate(45deg);
 
         &.swiper-pagination-bullet-active {
@@ -38,11 +40,22 @@
     .category__col { width: 100%; }
     .category__filter__col { width: 100%;padding-left: 0rem; }
     
-    .categoryCarousel .swiper-slide { display: inline-block;width: 25%; }
+    .categoryCarousel .swiper-slide { display: inline-block; }
 }
 @media (min-width:992px) {
     .category__list__box { max-width: 100px;   }
+    .categoryCarousel { width: 100%;height: 600px;padding-top: 1rem;  } 
+     
+      
+      .categoryCarousel .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto; 
+      }
 }
+ 
+  
 
 .category__list__box {
 
@@ -161,20 +174,20 @@
         height: 600px;width: 100%;object-fit: cover;border-radius: 1.5rem;
     }
     .btn-white {
-        bottom: 20%;width: 6.25rem;height: 6.25rem;background-color: transparent;border-color:rgba(255, 255, 255, 0.2);
+        width: 6.25rem;height: 6.25rem;background-color: transparent;border: 4px solid rgba(255, 255, 255, 0.5);
         animation: 1.5s infinite pulse;
 
         svg {
-            path { fill: var(--white); }
+            path { fill: rgba(255, 255, 255, 0.5); }
         }
 
-        &::after {
-            content: '';display: block;width: 100%;height: 100%;position: absolute;top: 0;left: 0;
-            border-radius: 100%;
-            background: rgba(255, 255, 255, 0.1); 
-            backdrop-filter: blur(28px); 
-            transition: all .3s ease-in-out;
-        }
+        // &::after {
+        //     content: '';display: block;width: 100%;height: 100%;position: absolute;top: 0;left: 0;
+        //     border-radius: 100%;
+        //     background: rgba(255, 255, 255, 0.1); 
+        //     backdrop-filter: blur(28px); 
+        //     transition: all .3s ease-in-out;
+        // }
         &:hover {
             &::after {
                 background: rgba(255, 255, 255, 0.4); 
@@ -394,6 +407,8 @@
     }
 }
 
+
+
 .highligt__card {
     border-radius: 1.5rem; 
     background-color: #FFFCF7;
@@ -439,7 +454,29 @@
         box-shadow: 6px 8px 24px -5px rgba(0, 0, 0, 0.2);
     }
 }
+@media(max-width:991px) {
+    .video__box.have__radius, .video__box.have__radius .video { border-radius: 1.5rem !important;overflow: hidden; }
+    .info__card {
+        height: auto;padding: 0%;border: 0;text-align: center;
 
+        .fs-1.text-dark {
+            background: #BD7F2A;  
+            background-image: -webkit-linear-gradient(to right, #BD7F2A , #85591C); 
+            background-image: linear-gradient(to right, #BD7F2A , #85591C); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+        }
+
+        &::before, &::after { content: none; }
+    }
+    .highligt__card {
+        background-color: #F6F6F6 !important;margin-top: -1rem;
+        border: 0;border-top-left-radius:0;border-top-right-radius:0; 
+        .product {
+            min-height: auto !important;
+        }
+    }
+}
 @media(min-width:992px) { 
     .slider__container {
         width: calc(100% + 16vw);
@@ -736,6 +773,16 @@
 
 .h-320 { height: 323px !important; }
 
+.exchange__box {
+    &::before, &::after { content:'';width: 90%;height: 1px;background: #B3B0A9;position: absolute;top: 0%;left: 50%;transform: translateX(-50%); }
+    &::after { top: auto;bottom: 1px; }
+}
+@media (max-width:991px){
+    .exchange__box {
+        &::before, &::after { width: 80%; }
+    }
+}
+
 @media(max-width:1199px) {
     .exchange__box {
         .frame { object-fit: contain !important; }
@@ -833,3 +880,14 @@
 }
 
 .swiper-container { overflow: hidden; }
+
+.galleryCarousel {
+    position: relative;
+    .controlBtn {
+        position: absolute;top: 50%;transform: translateY(-50%);z-index: 99; 
+ 
+    }
+    .galleryCarouselNavBtnPrev { left: 2rem; }
+    .galleryCarouselNavBtnNext { right: 2rem;left: auto; }
+}
+
