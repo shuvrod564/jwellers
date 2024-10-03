@@ -1292,6 +1292,12 @@ ul li {
 .cardCarousel .swiper-slide {
   width: auto;
 }
+.cardCarousel .swiper-slide .caption {
+  display: none;
+}
+.cardCarousel .swiper-slide.swiper-slide-active .caption {
+  display: block;
+}
 
 .cardCarousel .swiper-slide img {
   border: 4px solid var(--white);
