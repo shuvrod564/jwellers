@@ -54,10 +54,10 @@
         }
 
         
-        @media (min-width: 768px) { 
-            .celebrateSwiper { max-width: 300px; } 
-            .celebrateSwiper img { max-width: 2276px; } 
-        }
+        
+        .celebrateSwiper img { width: 276px;border: 2px solid var(--white);border-radius: .625rem;opacity: .6; } 
+        .celebrateSwiper .swiper-slide-active img { opacity: 1; } 
+        .celebrateSwiper .swiper-slide { width: auto; }
         .control__btn { width: 4rem;height: 4rem;background: var(--brand); }
         .control__btn:hover,.control__btn:focus, .control__btn:active { background: #832729; }
         .control__btn::after { font-size: .875rem;color: var(--white); }
@@ -90,6 +90,8 @@
             box-shadow: 0 4px 8px rgba(11, 11, 11, 0.2);
             color: #631517;font-weight: 600;
         }
+        .celebrate__tab__content .tab-pane { display: block;opacity: 0;visibility: hidden;height: 0; }
+        .celebrate__tab__content .tab-pane.show { opacity: 1;visibility: visible;height: auto; }
     </style>
 </head>
 <body> 
@@ -233,7 +235,7 @@
                 </h2>
                  
                 <div class="d-flex justify-content-center mt-4 mt-xl-5">
-                    <ul class="nav nav-pills celebrate__nav d-inline-flex flex-nowrap border gap-lg-3 rounded-pill p-1 m-0" id="pills-tab" role="tablist">
+                    <ul class="nav nav-pills celebrate__nav d-inline-flex flex-nowrap border gap-lg-3 rounded-pill p-1 mb-4" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                           <a href="javascript:void(0)" class="nav-link px-3 px-sm-4 py-3 rounded-pill position-relative" id="pills-occasionTab-tab" data-bs-toggle="pill" data-bs-target="#pills-occasionTab" type="button" role="tab" aria-controls="pills-occasionTab" aria-selected="true">Wedding Checklist</a>
                         </li>
@@ -245,12 +247,12 @@
                         </li>  
                     </ul> 
                 </div>
-                <div class="tab-content position-relative pt-4 pt-md-5" id="pills-tabContent">
+                <div class="tab-content celebrate__tab__content position-relative pt-4 pt-md-5" id="pills-tabContent">
                     <div class="tab-pane fade" id="pills-occasionTab" role="tabpanel" aria-labelledby="pills-occasionTab-tab" tabindex="0">
                         <div class="row g-4 align-items-center">
-                            <div class="col-lg-6 order-lg-2">
-                                <div class="position-relative px-lg-5 text-center">
-                                    <div class="swiper celebrateSwiper mx-auto"> 
+                            <div class="col-lg-6 order-lg-2 d-flex justify-content-center">
+                                <div class="d-flex" style="width: 276px;">
+                                    <div class="swiper celebrateSwiper w-100"> 
                                         <div class="swiper-wrapper">  
                                             <div class="swiper-slide">
                                                 <img 
@@ -282,6 +284,8 @@
                                                                                                
                                             </button>
                                         </div>
+                                        <!-- Navigation Buttons -->
+                                        <div class="swiper-pagination celebrateSwiperPagination"></div>
                                     </div>
 
                                 </div>
@@ -306,43 +310,43 @@
 
                     <div class="tab-pane fade show active" id="pills-budgetTab" role="tabpanel" aria-labelledby="pills-budgetTab-tab" tabindex="0">
                         <div class="row g-4 align-items-center">
-                            <div class="col-lg-6 order-lg-2">
-                                <div class="position-relative px-lg-5 text-center">
-                                    <div class="swiper celebrateSwiper mx-auto"> 
-                                        <div class="swiper-wrapper"> 
-                                             
-                                            <div class="swiper-slide">
-                                                <img 
-                                                    src="assets/celebrate/Take-Selfi-02.png"
-                                                    alt="Take Selfi"
-                                                    class="img-fluid" width="276" height="428"
-                                                > 
-                                            </div> 
-                                            <div class="swiper-slide">
-                                                <img 
-                                                    src="assets/celebrate/Take-Selfi-01.png"
-                                                    alt="Take Selfi"
-                                                    class="img-fluid" width="276" height="428"
-                                                > 
+                            <div class="col-lg-6 order-lg-2 d-flex justify-content-center align-items-center">
+                                <div class="" style="width: 276px;"> 
+                                    <div class="d-flex"> 
+                                        <div class="swiper celebrateSwiper w-100"> 
+                                            <div class="swiper-wrapper">  
+                                                <div class="swiper-slide">
+                                                    <img 
+                                                        src="assets/celebrate/Take-Selfi-02.png"
+                                                        alt="Take Selfi"
+                                                        class="img-fluid" width="276" height="428"
+                                                    > 
+                                                </div> 
+                                                <div class="swiper-slide">
+                                                    <img 
+                                                        src="assets/celebrate/Take-Selfi-01.png"
+                                                        alt="Take Selfi"
+                                                        class="img-fluid" width="276" height="428"
+                                                    > 
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img 
+                                                        src="assets/celebrate/Take-Selfi-03.png"
+                                                        alt="Take Selfi"
+                                                        class="img-fluid" width="276" height="428"
+                                                    > 
+                                                </div> 
+                                            </div>     
+                                            <div class="d-flex justify-content-between position-absolute top-50 translate-midddle-y z-3 w-100">
+                                                <button class="swiper-button-prev celebrateSwiperPrev control__btn btn d-flex justify-content-center align-items-center rounded-circle">                                               
+                                                </button>
+                                                <button class="swiper-button-next celebrateSwiperNext control__btn btn d-flex justify-content-center align-items-center rounded-circle">                                               
+                                                </button>
                                             </div>
-                                            <div class="swiper-slide">
-                                                <img 
-                                                    src="assets/celebrate/Take-Selfi-03.png"
-                                                    alt="Take Selfi"
-                                                    class="img-fluid" width="276" height="428"
-                                                > 
-                                            </div> 
-                                        </div>     
-                                        <div class="d-flex justify-content-between position-absolute top-50 translate-midddle-y z-3 w-100">
-                                            <button class="swiper-button-prev celebrateSwiperPrev control__btn btn d-flex justify-content-center align-items-center rounded-circle">
-                                                                                                 
-                                            </button>
-                                            <button class="swiper-button-next celebrateSwiperNext control__btn btn d-flex justify-content-center align-items-center rounded-circle">
-                                                                                               
-                                            </button>
-                                        </div>
+                                             <!-- Navigation Buttons -->
+                                            <div class="swiper-pagination celebrateSwiperPagination"></div>
+                                        </div> 
                                     </div>
-
                                 </div>
                             </div>
                             <div class="col-lg-6 order-lg-1 text-center text-lg-start">
@@ -364,44 +368,47 @@
 
                     <div class="tab-pane fade" id="pills-giftTab" role="tabpanel" aria-labelledby="pills-giftTab-tab" tabindex="0">
                         <div class="row g-4 align-items-center">
-                            <div class="col-lg-6 order-lg-2">
-                                <div class="position-relative px-lg-5 text-center">
-                                    <div class="swiper celebrateSwiper mx-auto"> 
-                                        <div class="swiper-wrapper">  
-                                            <div class="swiper-slide">
-                                                <img 
-                                                    src="assets/celebrate/Create-Events-02.png"
-                                                    alt="Create Events"
-                                                    class="img-fluid" width="276" height="428"
-                                                > 
-                                            </div> 
-                                            <div class="swiper-slide">
-                                                <img 
-                                                    src="assets/celebrate/Create-Events-01.png"
-                                                    alt="Create Events"
-                                                    class="img-fluid" width="276" height="428"
-                                                > 
-                                            </div> 
-                                            <div class="swiper-slide">
-                                                <img 
-                                                    src="assets/celebrate/Create-Events-03.png"
-                                                    alt="Create Events"
-                                                    class="img-fluid" width="276" height="428"
-                                                > 
-                                            </div> 
-                                        </div>     
-                                        <div class="d-flex justify-content-between position-absolute top-50 translate-midddle-y z-3 w-100">
-                                            <button class="swiper-button-prev celebrateSwiperPrev control__btn btn d-flex justify-content-center align-items-center rounded-circle">
-                                                                                                 
-                                            </button>
-                                            <button class="swiper-button-next celebrateSwiperNext control__btn btn d-flex justify-content-center align-items-center rounded-circle">
-                                                                                               
-                                            </button>
+                            <div class="col-lg-6 order-lg-2 d-flex justify-content-center align-items-center">
+                                <div class="" style="width: 276px;"> 
+                                    <div class="d-flex"> 
+                                        <div class="swiper celebrateSwiper w-100"> 
+                                            <div class="swiper-wrapper">  
+                                                <div class="swiper-slide">
+                                                    <img 
+                                                        src="assets/celebrate/Create-Events-02.png"
+                                                        alt="Create Events"
+                                                        class="img-fluid" width="276" height="428"
+                                                    > 
+                                                </div> 
+                                                <div class="swiper-slide">
+                                                    <img 
+                                                        src="assets/celebrate/Create-Events-01.png"
+                                                        alt="Create Events"
+                                                        class="img-fluid" width="276" height="428"
+                                                    > 
+                                                </div> 
+                                                <div class="swiper-slide">
+                                                    <img 
+                                                        src="assets/celebrate/Create-Events-03.png"
+                                                        alt="Create Events"
+                                                        class="img-fluid" width="276" height="428"
+                                                    > 
+                                                </div> 
+                                            </div>     
+                                            <div class="d-flex justify-content-between position-absolute top-50 translate-midddle-y z-3 w-100">
+                                                <button class="swiper-button-prev celebrateSwiperPrev control__btn btn d-flex justify-content-center align-items-center rounded-circle">
+                                                                                                     
+                                                </button>
+                                                <button class="swiper-button-next celebrateSwiperNext control__btn btn d-flex justify-content-center align-items-center rounded-circle">
+                                                                                                   
+                                                </button>
+                                            </div>
+                                            <!-- Navigation Buttons -->
+                                            <div class="swiper-pagination celebrateSwiperPagination"></div>
                                         </div>
-                                    </div>
-
+                                    </div> 
                                 </div>
-                            </div>
+                            </div> 
                             <div class="col-lg-6 order-lg-1 text-center text-lg-start">
                                 <h3 class="ff-fraunces fw-semibold display-4 gradient__title mb-3">
                                     Create Events
@@ -441,17 +448,20 @@
             // Optional parameters
             // slidesPerView: 1,
             // loop: true,
-            loop: true, 
+            loop: true,
+            slidesPerView: 'auto',
             effect: "cards",
-            grabCursor: true, 
-            initialSlide: 1, 
+            centeredSlides: true,
+            initialSlide: 1,
+    
+    
             breakpoints: {
                 768: {
                     slidesPerView: 1,
                     cardsEffect: {
                         perSlideOffset: 20,
                         slideShadows: false,
-                        perSlideRotate: 3, // Rotation of cards in degrees
+                        perSlideRotate: 8, // Rotation of cards in degrees
                     },
                 },
                 0: {
@@ -469,7 +479,7 @@
     
             // centeredSlidesBounds: true,
             pagination: {
-                el: '.swiper-pagination',
+                el: '.celebrateSwiperPagination',
                 clickable: true,
             },
     
